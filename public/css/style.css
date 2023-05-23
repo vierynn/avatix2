@@ -53,3 +53,38 @@
     padding-bottom: 8px;
     font-size: 15px;
 }
+/* HEADER */
+.header-container{
+    background-color: black !important;
+    padding-left: 30px;
+    padding-right: 100px;
+}
+.navbar-links>ul>li{
+    margin-left: 50px;
+}
+.btn-login{
+    background-color: #FF45B5 !important;
+    width: 150px;
+    border-radius: 7px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
