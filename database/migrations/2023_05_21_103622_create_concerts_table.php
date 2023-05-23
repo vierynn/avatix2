@@ -14,7 +14,7 @@ class CreateConcertsTable extends Migration
     public function up()
     {
         Schema::create('concerts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->timestamps();
             $table->string('name');
             $table->integer('price');
@@ -22,7 +22,6 @@ class CreateConcertsTable extends Migration
             $table->string('status');
             $table->string('location');
             $table->text('description');
-            $table->unique(array('id'));
         });
     }
 
