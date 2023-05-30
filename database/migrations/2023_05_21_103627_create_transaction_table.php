@@ -22,8 +22,8 @@ class CreateTransactionTable extends Migration
             $table->unique(array('tr_id'));
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->nullable()->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('concert_id');
-            $table->foreign('concert_id')->nullable()->references('id')->on('concerts')->onDelete('cascade');
+            $table->unsignedInteger('ticket_id');
+            $table->foreign('ticket_id')->nullable()->references('id')->on('ticket')->onDelete('cascade');
         });
     }
 

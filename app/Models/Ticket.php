@@ -4,21 +4,19 @@ namespace App\Models;
 use App\Models\User;
 use App\Models\Transaction;
 use App\Models\Ticket;
+use App\Models\TicketCategory;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Concerts extends Model
+class Ticket extends Model
 {
     use HasFactory;
-    protected $table = "concerts";
+    protected $table = "ticket";
 
     protected $fillable = [
-        'name',
-        'type',
-        'status',
-        'location',
-        'description'
+        'concert_id',
+        'ticketcat_id'
     ];
 
     public function transactions()
@@ -30,8 +28,10 @@ class Concerts extends Model
     {
         return $this->hasMany(User::class);
     }
-    public function ticket()
+
+    public function ticketcategory()
     {
-        return $this->hasMany(Ticket::class);
+        return $this->belongsTo(TicketCategory::class);
     }
 }
+

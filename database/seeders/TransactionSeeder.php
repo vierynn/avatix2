@@ -19,14 +19,14 @@ class TransactionSeeder extends Seeder
             'promo'=>'None',
             'date'=>'2023-05-18',
             'user_id'=>'1',
-            'concert_id'=>'1'
+            'ticket_id'=>'1'
         ]);
         DB::table('transaction')->insert([
             'transMethod'=>'ShopeePay',
             'promo'=>'None',
             'date'=>'2023-05-18',
             'user_id'=>'2',
-            'concert_id'=>'1'
+            'ticket_id'=>'2'
         ]);
     }
 }
