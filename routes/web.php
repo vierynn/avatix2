@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategorybarController;
+use App\Http\Controllers\NavbarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +14,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::prefix('/')->group(function() {
+    Route::get('/', function () {
+        return view('home');
+    })->name('home');
+    Route::get('/history', [NavbarController::class,'history'])->name('history');
+    Route::get('/purchase', [NavbarController::class,'purchase'])->name('purchases');
+    Route::get('/notification', [NavbarController::class,'notification']);
+    Route::get('/profile', [NavbarController::class,'profile']);
+});
+Route::prefix('/category')->group(function() {
+    Route::get('/kpop', [CategorybarController::class,'kpop'])->name('kpop');
+    Route::get('/festivalmusic', [CategorybarController::class,'festivalmusic'])->name('festMusic');
+    Route::get('/solo', [CategorybarController::class,'solo'])->name('solo');
+    Route::get('/meetandgreet', [CategorybarController::class,'meet'])->name('meet');
+    Route::get('/pop', [CategorybarController::class,'pop'])->name('pop');
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+});
