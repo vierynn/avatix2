@@ -16,7 +16,6 @@ class ConcertSeeder extends Seeder
     {
         DB::table('concerts')->insert([
             'name'=>'Coldplay 2023',
-            'price'=>'1500000',
             'type'=>'International',
             'status'=>'Opened',
             'location'=>'Jakarta',
