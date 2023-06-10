@@ -17,7 +17,7 @@ class CreateTransactionTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('transMethod');
-            $table->string('promo');
+            $table->string('promo')->nullable();
             $table->date('date');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->nullable()->references('id')->on('users')->onDelete('cascade');
