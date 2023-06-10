@@ -41,7 +41,7 @@ class ConcertSeeder extends Seeder
             'artist'=>'Yura Yunita',
             'type'=>'Indonesian',
             'status'=>'Opened',
-            'location'=>'Yogyakarta',
+            'location'=>'Surabaya',
             'description'=>'Yura Yunita siap untuk merayakan tangis dan melempar magis dari album ketiganya, Tutur Batin dalam sebuah konser tunggal bertajuk Pertunjukan Tutur Batin. 
             Di tanggal 9 dan 16 Juni mendatang, Tutur Batin siap untuk menemui bentuk terbarunya. Setelah diperkenalkan ke khalayak luas pada Oktober 2021 dan mendapatkan kesan yang baik dari para pendengar, 
             kini saatnya album tersebut dihadirkan dalam format konser tunggal.
