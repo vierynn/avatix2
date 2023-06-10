@@ -15,26 +15,14 @@ class ConcertSeeder extends Seeder
     public function run()
     {
         DB::table('concerts')->insert([
-            [
-                'name'=>'coldplay',
-                'type'=>'International',
-                'status'=>'Opened',
-                'location'=>'Jakarta',
-                'description'=>'Coldplay adalah grup musik rock Inggris yang dibentuk tahun 1997.
-                                Saat ini beranggotakan Chris Martin sebagai vokalis, Jonny Buckland sebagai gitaris,
-                                Guy Berryman sebagai bassis, Will Champion sebagai drumer dan perkusionis, dan Phil
-                                Harvey sebagai pengarah kreatif.'
-            ],
-             [
-                'name'=>'blackpink',
-                'type'=>'International',
-                'status'=>'Opened',
-                'location'=>'Jakarta',
-                'description'=>'Coldplay adalah grup musik rock Inggris yang dibentuk tahun 1997.
-                                Saat ini beranggotakan Chris Martin sebagai vokalis, Jonny Buckland sebagai gitaris,
-                                Guy Berryman sebagai bassis, Will Champion sebagai drumer dan perkusionis, dan Phil
-                                Harvey sebagai pengarah kreatif.'
-            ]
-    ]);
+            'name'=>'coldplay',
+            'type'=>'International',
+            'status'=>'Opened',
+            'location'=>'Jakarta',
+            'description'=>'Coldplay adalah grup musik rock Inggris yang dibentuk tahun 1997.
+                            Saat ini beranggotakan Chris Martin sebagai vokalis, Jonny Buckland sebagai gitaris,
+                            Guy Berryman sebagai bassis, Will Champion sebagai drumer dan perkusionis, dan Phil
+                            Harvey sebagai pengarah kreatif.'
+        ]);
     }
 }
