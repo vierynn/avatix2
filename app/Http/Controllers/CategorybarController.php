@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class CategorybarController extends Controller
 {
+    public function all(){
+        return view('allconcert');
+    }
     public function kpop(){
         return view('kpop');
     }

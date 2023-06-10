@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategorybarController;
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\ConcertController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,11 +24,13 @@ Route::prefix('/')->group(function() {
     Route::get('/notification', [NavbarController::class,'notification']);
     Route::get('/profile', [NavbarController::class,'profile']);
 });
+Route::get('/', [CategorybarController::class,'all'])->name('home');
+Route::get('/', [ConcertController::class, 'showconcert']);
 Route::prefix('/category')->group(function() {
     Route::get('/kpop', [CategorybarController::class,'kpop'])->name('kpop');
     Route::get('/festivalmusic', [CategorybarController::class,'festivalmusic'])->name('festMusic');
     Route::get('/solo', [CategorybarController::class,'solo'])->name('solo');
     Route::get('/meetandgreet', [CategorybarController::class,'meet'])->name('meet');
     Route::get('/pop', [CategorybarController::class,'pop'])->name('pop');
-
 });
+
