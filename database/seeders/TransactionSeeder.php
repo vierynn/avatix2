@@ -42,5 +42,12 @@ class TransactionSeeder extends Seeder
             'ticketcat_id'=>'13',
             'quantity'=>'1'
         ]);
+        DB::table('transactions')->insert([
+            'transMethod'=>'Gopay',
+            'date'=>'2023-05-31',
+            'user_id'=>'2',
+            'ticketcat_id'=>'25',
+            'quantity'=>'1'
+        ]);
     }
 }
