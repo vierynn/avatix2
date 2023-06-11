@@ -25,7 +25,7 @@
                 </div>
                 <div class="position-absolute">
                     <form action="btn-book">
-                        <button type="button" class="btn btn-light btn-booked">Book</button>
+                        <a href="/bookedpage"><button type="button" class="btn btn-light btn-booked">Book</button></a>
                     </form>
                 </div>
             </div>

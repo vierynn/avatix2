@@ -33,4 +33,6 @@ Route::prefix('/category')->group(function() {
     Route::get('/meetandgreet', [CategorybarController::class,'meet'])->name('meet');
     Route::get('/pop', [CategorybarController::class,'pop'])->name('pop');
 });
-
+Route::get('/bookedpage',function(){
+    return view('bookedpage');
+});

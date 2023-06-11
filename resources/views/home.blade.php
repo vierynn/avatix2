@@ -243,9 +243,6 @@
             </div>
             @yield('concert')
           </div>
-          <div class="col custom-col3 position fixed">
-
-          </div>
         </div>
       </div>
 </body>

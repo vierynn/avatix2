@@ -409,3 +409,31 @@
     width: 100px;
     z-index: 1;
 }
+
+/* BOOKING-PAGE */
+.btn-booked2{
+    background-color: #FF45B5 !important;
+    width: 200px;
+    height: 40px;
+    border-radius: 7px;
+    color: white;
+}
+.content-book{
+    padding: 40px;
+    margin-left: 30px;
+}
+.poster>img{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+.description-concert{
+    margin-top: 220px;
+    width: 700px;
+    margin-left: -310px;
+    text-align: justify;
+}
+.information-content{
+    justify-content: space-between;
+    margin-right: 100px;
+}
