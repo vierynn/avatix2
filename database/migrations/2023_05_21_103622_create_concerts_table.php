@@ -20,7 +20,8 @@ class CreateConcertsTable extends Migration
             $table->string('artist')->nullable();
             $table->string('type');
             $table->string('status');
-            $table->string('location');
+            $table->string('city');
+            $table->string('place');
             $table->text('description');
             $table->string('image_path');
         });
