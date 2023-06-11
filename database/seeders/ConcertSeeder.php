@@ -19,8 +19,12 @@ class ConcertSeeder extends Seeder
             'artist'=>'COLDPLAY',
             'type'=>'International',
             'status'=>'Opened',
+            'day'=>'WEDNESDAY',
+            'date'=>'15',
+            'month'=>'November',
+            'year'=>'2023',
             'city'=>'Jakarta',
-            'place'=>'Gelora Bung Karno',
+            'place'=>'Gelora Bung Karno Main Stadium',
             'description'=>'Coldplay is an English rock band formed in 1997.
             Currently, the members are Chris Martin as vocalist, Jonny Buckland as guitarist, Guy Berryman as bassist, Will Champion as drummer and percussionist, and Phil
             Harvey as creative director.',
@@ -32,8 +36,27 @@ class ConcertSeeder extends Seeder
             'artist'=>'BLACKPINK',
             'type'=>'K-Pop',
             'status'=>'Opened',
+            'day'=>'SATURDAY',
+            'date'=>'11',
+            'month'=>'March',
+            'year'=>'2023',
             'city'=>'Jakarta',
-            'place'=> 'Gelora Bung Karno',
+            'place'=> 'Gelora Bung Karno Main Stadium',
+            'description'=>'Legendary K-Pop Group, BLACKPINK will be back in Jakarta to promote their new album, BORN PINK through a world tour with the name, BLACKPINK WORLD TOUR [BORN PINK].
+            This four people group will greet Indonesian BLINK for two days!',
+            'image_path'=>'img/blackpink.png'
+        ]);
+        DB::table('concerts')->insert([
+            'name'=>': BORN PINK',
+            'artist'=>'BLACKPINK',
+            'type'=>'K-Pop',
+            'status'=>'Opened',
+            'day'=>'SUNDAY',
+            'date'=>'12',
+            'month'=>'March',
+            'year'=>'2023',
+            'city'=>'Jakarta',
+            'place'=> 'Gelora Bung Karno Main Stadium',
             'description'=>'Legendary K-Pop Group, BLACKPINK will be back in Jakarta to promote their new album, BORN PINK through a world tour with the name, BLACKPINK WORLD TOUR [BORN PINK].
             This four people group will greet Indonesian BLINK for two days!',
             'image_path'=>'img/blackpink.png'
@@ -44,8 +67,12 @@ class ConcertSeeder extends Seeder
             'artist'=>'YURA YUNITA',
             'type'=>'Indonesian',
             'status'=>'Opened',
+            'day'=>'FRIDAY',
+            'date'=>'09',
+            'month'=>'June',
+            'year'=>'2023',
             'city'=>'Surabaya',
-            'place'=>'Jatim Expo',
+            'place'=>'Jatim International Expo(JIE) Convention Exhibition',
             'description'=>'Yura Yunita is ready to celebrate magic from her third album, Tutur Batin in a solo concert titled Pertunjukkan Tutur Batin.
             After being introduced to a wide audience in October 2021 and getting a good impression from listeners.',
             'image_path'=>'img/tuturbatin.jpg'
@@ -56,6 +83,10 @@ class ConcertSeeder extends Seeder
             'artist'=>'NIKI',
             'type'=>'International',
             'status'=>'Opened',
+            'day'=>'TUESDAY',
+            'date'=>'26',
+            'month'=>'September',
+            'year'=>'2023',
             'city'=>'Bali',
             'place'=>'Garuda Wisnu Kencana',
             'description'=>'For the first time, the beautiful singer Nicole Zefanya or NIKI will finally return to her hometown in Indonesia by holding a concert in Jakarta.
@@ -67,8 +98,40 @@ class ConcertSeeder extends Seeder
             'name'=>'WE THE FEST 2023',
             'type'=>'International',
             'status'=>'Opened',
+            'day'=>'FRIDAY',
+            'date'=>'21',
+            'month'=>'July',
+            'year'=>'2023',
             'city'=>'Tangerang',
-            'place'=>'ICE BSD',
+            'place'=>'Indonesia Convention Exhibition BSD',
+            'description'=>'We The Fest is an annual music, art, fashion and food festival held in Jakarta.
+            In We The Fest 2023, what is quite attention-grabbing is the presence of The 1975 and The Strokes. The Strokes themselves will be performing in Indonesia for the first time.',
+            'image_path'=>'img/wethefest.jpg'
+        ]);
+        DB::table('concerts')->insert([
+            'name'=>'WE THE FEST 2023',
+            'type'=>'International',
+            'status'=>'Opened',
+            'day'=>'SATURDAY',
+            'date'=>'22',
+            'month'=>'July',
+            'year'=>'2023',
+            'city'=>'Tangerang',
+            'place'=>'Indonesia Convention Exhibition BSD',
+            'description'=>'We The Fest is an annual music, art, fashion and food festival held in Jakarta.
+            In We The Fest 2023, what is quite attention-grabbing is the presence of The 1975 and The Strokes. The Strokes themselves will be performing in Indonesia for the first time.',
+            'image_path'=>'img/wethefest.jpg'
+        ]);
+        DB::table('concerts')->insert([
+            'name'=>'WE THE FEST 2023',
+            'type'=>'International',
+            'status'=>'Opened',
+            'day'=>'SUNDAY',
+            'date'=>'22',
+            'month'=>'July',
+            'year'=>'2023',
+            'city'=>'Tangerang',
+            'place'=>'Indonesia Convention Exhibition BSD',
             'description'=>'We The Fest is an annual music, art, fashion and food festival held in Jakarta.
             In We The Fest 2023, what is quite attention-grabbing is the presence of The 1975 and The Strokes. The Strokes themselves will be performing in Indonesia for the first time.',
             'image_path'=>'img/wethefest.jpg'
@@ -79,8 +142,12 @@ class ConcertSeeder extends Seeder
             'artist'=>'SLANK',
             'type'=>'Indonesian',
             'status'=>'Opened',
+            'day'=>'SATURDAY',
+            'date'=>'13',
+            'month'=>'Mei',
+            'year'=>'2023',
             'city'=>'Bandung',
-            'place'=>'Eldorado Dome',
+            'place'=>'Eldorado Dome Bandung',
             'description'=>'Album Tujuh 25th Anniversary Tour continues in the fifth city, namely, Bandung.
             Slank, who appeared in full formation, invited Slankers Bali to reminisce together through songs from their album which was released in 1998 with the addition of 7 hit songs that all the audience already memorized.',
             'image_path'=>'img/slank.jpg'

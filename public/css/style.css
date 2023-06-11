@@ -353,8 +353,7 @@
 .cards-content{
     padding-top: 25px;
     margin-top: 20px;
-    background-color: wheat;
-    width: 400px;
+    width: 410px;
 }
 .cards-content>p{
     font-size: 12px;
@@ -363,13 +362,13 @@
 }
 .information-concert{
     background-color: #000000;
-    width: 170px;
-    height: 110px;
+    width: 150px;
+    height: 130px;
     color: white;
-    margin-left: 700px;
-    margin-top: 40px;
+    margin-left: 710px;
+    margin-top: 45px;
     border-radius: 7px;
-    padding: 12px;
+    padding: 15px;
 }
 .info-content{
     display: flex;
@@ -399,19 +398,6 @@
     color: white;
     margin-left: 310px;
 }
-.test{
-    background-color: wheat;
-    height: 60px;
-    margin-bottom: 30px;
-    width: 100px;
-}
-.test2{
-    height: 40px;
-    margin-top: 30px;
-    background-color: #ff0000;
-    width: 100px;
-    z-index: 1;
-}
 
 /* BOOKING-PAGE */
 .btn-booked2{
@@ -439,4 +425,26 @@
 .information-content{
     justify-content: space-between;
     margin-right: 250px;
+}
+.price-list-content{
+    margin-top: 20px;
+    display: flex;
+}
+.price-list-text>p{
+    width: 190px;
+    background-color: wheat;
+    font-family: 50px;
+}
+.seatplan-img>img{
+    width: 550px;
+    height: auto;
+    border-radius: 7px;
+    margin-left: 680px;
+}
+
+/* BOOKING DETAIL */
+.terms>li{
+    color: grey !important;
+    margin-bottom: 10px;
+    text-align: justify;
 }

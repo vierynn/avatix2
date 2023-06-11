@@ -6,14 +6,19 @@ use App\Models\Ticket;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ticket extends Model
+class TicketCategory extends Model
 {
     use HasFactory;
-    protected $table = "ticket";
+    protected $table = "ticketcategory";
 
     protected $fillable = [
         'price',
-        'category'
+        'day',
+        'date',
+        'month',
+        'year',
+        'category',
+        'concert_id'
     ];
 
     public function ticket()
