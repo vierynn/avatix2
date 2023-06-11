@@ -17,6 +17,7 @@ class CreateConcertsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->string('artist')->nullable();
             $table->string('type');
             $table->string('status');
             $table->string('location');
