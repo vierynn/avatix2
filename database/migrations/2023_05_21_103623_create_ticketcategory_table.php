@@ -16,8 +16,8 @@ class CreateTicketcategoryTable extends Migration
         Schema::create('ticketcategory', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('price');
-            $table->date('date');
             $table->string('category');
+            $table->date('date');
             $table->unsignedInteger('concert_id');
             $table->foreign('concert_id')->nullable()->references('id')->on('concerts')->onDelete('cascade');
             $table->timestamps();

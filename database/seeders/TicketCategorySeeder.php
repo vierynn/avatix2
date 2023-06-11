@@ -17,67 +17,67 @@ class TicketCategorySeeder extends Seeder
 
         DB::table('ticketcategory')->insert([
             'price'=>'11000000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Ultimate Experience',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'5700000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'My Universe',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'5000000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 1',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'3500000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Festival',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'4000000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 2',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'3250000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 3',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'2500000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 4',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'1750000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 5',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'1250000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 6',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'1250000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 7',
             'concert_id'=>'1'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'800000',
-            'date'=>'2023-11-15', 
+            'date'=>'2023-11-15',
             'category'=>'Cat 8',
             'concert_id'=>'1'
         ]);
@@ -85,77 +85,77 @@ class TicketCategorySeeder extends Seeder
 
         DB::table('ticketcategory')->insert([
             'price'=>'5800000',
-            'date'=>'2023-05-21', 
+            'date'=>'2023-05-21',
             'category'=>'VIP',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'3400000',
-            'date'=>'2023-05-21', 
+            'date'=>'2023-05-21',
             'category'=>'Platinum',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'2900000',
-            'date'=>'2023-05-21', 
+            'date'=>'2023-05-21',
             'category'=>'Cat 1',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'2600000',
-            'date'=>'2023-05-21', 
+            'date'=>'2023-05-21',
             'category'=>'Cat 2',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'2100000',
-            'date'=>'2023-05-21', 
+            'date'=>'2023-05-21',
             'category'=>'Cat 3',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'1350000',
-            'date'=>'2023-05-21', 
+            'date'=>'2023-05-21',
             'category'=>'Cat 4',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'5800000',
-            'date'=>'2023-05-22', 
+            'date'=>'2023-05-22',
             'category'=>'VIP',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'3400000',
-            'date'=>'2023-05-22', 
+            'date'=>'2023-05-22',
             'category'=>'Platinum',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'2900000',
-            'date'=>'2023-05-22', 
+            'date'=>'2023-05-22',
             'category'=>'Cat 1',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'2600000',
-            'date'=>'2023-05-22', 
+            'date'=>'2023-05-22',
             'category'=>'Cat 2',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'2100000',
-            'date'=>'2023-05-22', 
+            'date'=>'2023-05-22',
             'category'=>'Cat 3',
             'concert_id'=>'2'
         ]);
         DB::table('ticketcategory')->insert([
             'price'=>'1350000',
-            'date'=>'2023-05-22', 
+            'date'=>'2023-05-22',
             'category'=>'Cat 4',
             'concert_id'=>'2'
         ]);
-        
+
 
         DB::table('ticketcategory')->insert([
             'price'=>'1300000',

@@ -16,16 +16,16 @@
                 </div>
                 <div class="information-concert position-absolute">
                     <div class="info-content">
-                        <h2></h2>
-                        <p>March <br> 2023</p>
+                        <h2>{{$concert->date}}</h2>
+                        <p>{{$concert->month}}<br>{{$concert->year}}</p>
                     </div>
                     <div class="location">
-                        <p>Gelora Bung Karno Main Stadium</p>
+                        <p>{{$concert->place}}</p>
                     </div>
                 </div>
                 <div class="position-absolute">
                     <form action="btn-book">
-                        <button type="button" class="btn btn-light btn-booked">Book</button>
+                        <a href="{{ route('bookedpage.show', ['id' => $concert->id]) }}"><button type="button" class="btn btn-light btn-booked">Book</button></a>
                     </form>
                 </div>
             </div>
