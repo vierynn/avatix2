@@ -18,13 +18,36 @@ class TransactionSeeder extends Seeder
             'transMethod'=>'BCA',
             'date'=>'2023-05-18',
             'user_id'=>'1',
-            'ticket_id'=>'1'
+            'ticketcat_id'=>'1',
+            'quantity'=>'1'
         ]);
         DB::table('transactions')->insert([
             'transMethod'=>'ShopeePay',
             'date'=>'2023-05-18',
             'user_id'=>'2',
-            'ticket_id'=>'2'
+            'ticketcat_id'=>'9',
+            'quantity'=>'1'
+        ]);
+        DB::table('transactions')->insert([
+            'transMethod'=>'Gopay',
+            'date'=>'2023-05-18',
+            'user_id'=>'1',
+            'ticketcat_id'=>'18',
+            'quantity'=>'2'
+        ]);
+        DB::table('transactions')->insert([
+            'transMethod'=>'BCA',
+            'date'=>'2023-05-18',
+            'user_id'=>'2',
+            'ticketcat_id'=>'13',
+            'quantity'=>'1'
+        ]);
+        DB::table('transactions')->insert([
+            'transMethod'=>'Gopay',
+            'date'=>'2023-05-31',
+            'user_id'=>'2',
+            'ticketcat_id'=>'25',
+            'quantity'=>'1'
         ]);
     }
 }

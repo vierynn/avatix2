@@ -19,11 +19,11 @@ class ConcertSeeder extends Seeder
             'artist'=>'COLDPLAY',
             'type'=>'International',
             'status'=>'Opened',
-            'location'=>'Jakarta',
-            'description'=>'Coldplay adalah grup musik rock Inggris yang dibentuk tahun 1997.
-                            Saat ini beranggotakan Chris Martin sebagai vokalis, Jonny Buckland sebagai gitaris,
-                            Guy Berryman sebagai bassis, Will Champion sebagai drumer dan perkusionis, dan Phil
-                            Harvey sebagai pengarah kreatif.',
+            'city'=>'Jakarta',
+            'place'=>'Gelora Bung Karno',
+            'description'=>'Coldplay is an English rock band formed in 1997. 
+            Currently, the members are Chris Martin as vocalist, Jonny Buckland as guitarist, Guy Berryman as bassist, Will Champion as drummer and percussionist, and Phil 
+            Harvey as creative director.',
             'image_path'=>'img/coldplay.png'
          ]);
 
@@ -32,8 +32,10 @@ class ConcertSeeder extends Seeder
             'artist'=>'BLACKPINK',
             'type'=>'K-Pop',
             'status'=>'Opened',
-            'location'=>'Jakarta',
-            'description'=>'Grup K-pop legendaris, BLACKPINK akan datang kembali ke Jakarta untuk mempromosikan album terbaru mereka, BORN PINK melalui tur dunia mereka yang bertajuk, BLACKPINK WORLD TOUR [BORN PINK]. Grup beranggotakan empat orang ini akan menyapa BLINK Indonesia selama dua hari!',
+            'city'=>'Jakarta',
+            'place'=> 'Gelora Bung Karno',
+            'description'=>'Legendary K-Pop Group, BLACKPINK will be back in Jakarta to promote their new album, BORN PINK through a world tour with the name, BLACKPINK WORLD TOUR [BORN PINK]. 
+            This four people group will greet Indonesian BLINK for two days!',
             'image_path'=>'img/blackpink.png'
         ]);
 
@@ -42,10 +44,11 @@ class ConcertSeeder extends Seeder
             'artist'=>'YURA YUNITA',
             'type'=>'Indonesian',
             'status'=>'Opened',
-            'location'=>'Surabaya',
-            'description'=>'Yura Yunita siap untuk merayakan tangis dan melempar magis dari album ketiganya, Tutur Batin dalam sebuah konser tunggal bertajuk Pertunjukan Tutur Batin.
-            Setelah diperkenalkan ke khalayak luas pada Oktober 2021 dan mendapatkan kesan yang baik dari para pendengar,
-            kini saatnya album tersebut dihadirkan dalam format konser tunggal.',
+            'city'=>'Surabaya',
+            'place'=>'Jatim Expo',
+            'description'=>'Yura Yunita is ready to celebrate magic from her third album, Tutur Batin in a solo concert titled Pertunjukkan Tutur Batin. 
+            After being introduced to a wide audience in October 2021 and getting a good impression from listeners,
+            now is the time for the album to be presented in a solo concert.',
             'image_path'=>'img/tuturbatin.jpg'
     ]);
 
@@ -54,9 +57,10 @@ class ConcertSeeder extends Seeder
             'artist'=>'NIKI',
             'type'=>'International',
             'status'=>'Opened',
-            'location'=>'Bali',
-            'description'=>'Untuk pertama kalinya, penyanyi cantik Nicole Zefanya atau NIKI akhirnya akan pulang kampung ke Indonesia dengan menggelar konser di Jakarta.
-            Telah dikonfirmasi bahwa NIKI akan diboyong oleh Northstar Entertainment dan Springboard untuk menggelar konser bertajuk Nicole World Tour 2023.',
+            'city'=>'Bali',
+            'place'=>'Garuda Wisnu Kencana',
+            'description'=>'For the first time, the beautiful singer Nicole Zefanya or NIKI will finally return to her hometown in Indonesia by holding a concert in Jakarta.
+            It has been confirmed that NIKI will be brought in by Northstar Entertainment and Springboard to hold a concert titled Nicole World Tour 2023.',
             'image_path'=>'img/niki.jpg'
         ]);
 
@@ -64,9 +68,10 @@ class ConcertSeeder extends Seeder
             'name'=>'WE THE FEST 2023',
             'type'=>'International',
             'status'=>'Opened',
-            'location'=>'Tangerang',
-            'description'=>'We The Fest adalah sebuah festival musik, seni, mode, dan makanan tahunan yang diselenggarakan di Jakarta.
-            Dalam We The Fest 2023 yang cukup menyita perhatian ialah hadirnya The 1975 dan The Strokes. The Strokes sendiri ini adalah untuk pertama kalinya akan tampil di Indonesia.',
+            'city'=>'Tangerang',
+            'place'=>'ICE BSD',
+            'description'=>'We The Fest is an annual music, art, fashion and food festival held in Jakarta.
+            In We The Fest 2023, what is quite attention-grabbing is the presence of The 1975 and The Strokes. The Strokes themselves will be performing in Indonesia for the first time.',
             'image_path'=>'img/wethefest.jpg'
         ]);
 
@@ -75,9 +80,10 @@ class ConcertSeeder extends Seeder
             'artist'=>'SLANK',
             'type'=>'Indonesian',
             'status'=>'Opened',
-            'location'=>'Bandung',
-            'description'=>'Album Tujuh 25th Anniversary Tour berlanjut di kota kelima yaitu, Bandung.
-            Slank yang tampil dengan formasi lengkap mengajak Slankers Bali untuk bernostalgia bersama lewat lagu-lagu dari album ketujuh Slank yang dirilis di tahun 1998 silam dengan tambahan 7 lagu hits yang udah dihafal semua penonton.',
+            'city'=>'Bandung',
+            'place'=>'Eldorado Dome',
+            'description'=>'Album Tujuh 25th Anniversary Tour continues in the fifth city, namely, Bandung.
+            Slank, who appeared in full formation, invited Slankers Bali to reminisce together through songs from their album which was released in 1998 with the addition of 7 hit songs that all the audience already memorized.',
             'image_path'=>'img/slank.jpg'
         ]);
     }

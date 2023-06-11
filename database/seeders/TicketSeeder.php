@@ -15,13 +15,9 @@ class TicketSeeder extends Seeder
     public function run()
     {
         DB::table('ticket')->insert([
-            'place'=>'GBK',
-            'concert_id'=>'1',
             'ticketcat_id'=>'1',
         ]);
         DB::table('ticket')->insert([
-            'place'=>'ICE BSD',
-            'concert_id'=>'1',
             'ticketcat_id'=>'2',
         ]);
     }
