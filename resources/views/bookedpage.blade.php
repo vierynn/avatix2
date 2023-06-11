@@ -43,6 +43,21 @@
                 </div>
             </div>
         </div>
+        <hr style="margin-top: 30px; width: 1400px">
+        <div class="price-list-content">
+            <div class="price-list-text">
+                <h5 style="margin-bottom: 15px;">PRICELIST</h5>
+                <P>VIP  : IDR 3.800.000
+                    PLATINUM: IDR 3.400.000
+                    CAT 1 : IDR 2.900.000
+                    CAT 2: IDR 2.600.000
+                    CAT 3: IDR 2.100.000
+                    CAT 4: IDR 1.350.000</P>
+            </div>
+            <div class="seatplan-img">
+                <img src="{{asset('img/seatplan_blackpink.jpg')}}" alt="">
+            </div>
+        </div>
 
     </div>
 </body>

@@ -15,45 +15,44 @@ class ConcertSeeder extends Seeder
     public function run()
     {
         DB::table('concerts')->insert([
-            'name'=>':MUSIC OF THE SPHERES',
+            'name'=>': MUSIC OF THE SPHERES',
             'artist'=>'COLDPLAY',
             'type'=>'International',
             'status'=>'Opened',
             'city'=>'Jakarta',
             'place'=>'Gelora Bung Karno',
-            'description'=>'Coldplay is an English rock band formed in 1997. 
-            Currently, the members are Chris Martin as vocalist, Jonny Buckland as guitarist, Guy Berryman as bassist, Will Champion as drummer and percussionist, and Phil 
+            'description'=>'Coldplay is an English rock band formed in 1997.
+            Currently, the members are Chris Martin as vocalist, Jonny Buckland as guitarist, Guy Berryman as bassist, Will Champion as drummer and percussionist, and Phil
             Harvey as creative director.',
             'image_path'=>'img/coldplay.png'
          ]);
 
         DB::table('concerts')->insert([
-            'name'=>':BORN PINK',
+            'name'=>': BORN PINK',
             'artist'=>'BLACKPINK',
             'type'=>'K-Pop',
             'status'=>'Opened',
             'city'=>'Jakarta',
             'place'=> 'Gelora Bung Karno',
-            'description'=>'Legendary K-Pop Group, BLACKPINK will be back in Jakarta to promote their new album, BORN PINK through a world tour with the name, BLACKPINK WORLD TOUR [BORN PINK]. 
+            'description'=>'Legendary K-Pop Group, BLACKPINK will be back in Jakarta to promote their new album, BORN PINK through a world tour with the name, BLACKPINK WORLD TOUR [BORN PINK].
             This four people group will greet Indonesian BLINK for two days!',
             'image_path'=>'img/blackpink.png'
         ]);
 
         DB::table('concerts')->insert([
-            'name'=>':PERTUNJUKAN TUTUR BATIN LIVE CONCERT 2023',
+            'name'=>': PERTUNJUKAN TUTUR BATIN LIVE CONCERT 2023',
             'artist'=>'YURA YUNITA',
             'type'=>'Indonesian',
             'status'=>'Opened',
             'city'=>'Surabaya',
             'place'=>'Jatim Expo',
-            'description'=>'Yura Yunita is ready to celebrate magic from her third album, Tutur Batin in a solo concert titled Pertunjukkan Tutur Batin. 
-            After being introduced to a wide audience in October 2021 and getting a good impression from listeners,
-            now is the time for the album to be presented in a solo concert.',
+            'description'=>'Yura Yunita is ready to celebrate magic from her third album, Tutur Batin in a solo concert titled Pertunjukkan Tutur Batin.
+            After being introduced to a wide audience in October 2021 and getting a good impression from listeners.',
             'image_path'=>'img/tuturbatin.jpg'
     ]);
 
         DB::table('concerts')->insert([
-            'name'=>':NICOLE WORLD TOUR 2023',
+            'name'=>': NICOLE WORLD TOUR 2023',
             'artist'=>'NIKI',
             'type'=>'International',
             'status'=>'Opened',
@@ -76,7 +75,7 @@ class ConcertSeeder extends Seeder
         ]);
 
         DB::table('concerts')->insert([
-            'name'=>':SLANK 25TH ANNIVERSARY TOUR',
+            'name'=>': SLANK 25TH ANNIVERSARY TOUR',
             'artist'=>'SLANK',
             'type'=>'Indonesian',
             'status'=>'Opened',

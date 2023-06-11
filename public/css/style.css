@@ -352,6 +352,9 @@
 }
 .cards-content{
     padding-top: 25px;
+    margin-top: 20px;
+    background-color: wheat;
+    width: 400px;
 }
 .cards-content>p{
     font-size: 12px;
@@ -364,7 +367,7 @@
     height: 110px;
     color: white;
     margin-left: 700px;
-    margin-top: 28px;
+    margin-top: 40px;
     border-radius: 7px;
     padding: 12px;
 }
@@ -435,5 +438,5 @@
 }
 .information-content{
     justify-content: space-between;
-    margin-right: 100px;
+    margin-right: 250px;
 }

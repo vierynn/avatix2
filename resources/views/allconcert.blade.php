@@ -3,6 +3,7 @@
 @section('concert')
 <div class="cards-container">
     @foreach ($concerts as $concert)
+    {{-- dd($concert) --}}
         <div class="card mb-3 cards position-relative">
             <div class="row g-0 card-content">
                 <div class="col-md-4 image-cards">
