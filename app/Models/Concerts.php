@@ -15,10 +15,13 @@ class Concerts extends Model
 
     protected $fillable = [
         'name',
+        'artist',
         'type',
         'status',
-        'location',
-        'description'
+        'city',
+        'place',
+        'description',
+        'image_path',
     ];
 
     public function transactions()

@@ -18,7 +18,8 @@ class Transaction extends Model
         'promo',
         'date',
         'user_id',
-        'ticket_id'
+        'ticket_id',
+        'quantity'
     ];
 
     public function concerts()
