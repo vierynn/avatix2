@@ -15,7 +15,7 @@ class ConcertSeeder extends Seeder
     public function run()
     {
         DB::table('concerts')->insert([
-            'name'=>'coldplay',
+            'name'=>'COLDPLAY',
             'type'=>'International',
             'status'=>'Opened',
             'location'=>'Jakarta',

@@ -338,15 +338,58 @@
 /* ALL CONCERT */
 .cards{
     margin-bottom: 20px !important;
-}
-.cards-container{
-    width: 900px;
+    width: 900px !important;
     height: 200px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    position: relative;
 }
-.images-cards>img{
-    width: 80px !important;
+.image-cards>img{
+    padding: 20px;
+    border-radius: 30px !important;
+    width: 300px !important;
     height: auto !important;
 }
+.cards-content{
+    padding-top: 25px;
+}
+.cards-content>p{
+    font-size: 12px;
+    width: 370px;
+    text-align: justify;
+}
+.information-concert{
+    background-color: #000000;
+    position: absolute;
+    width: 170px;
+    height: 110px;
+    color: white;
+    margin-left: 700px;
+    margin-top: 28px;
+    border-radius: 7px;
+    padding: 12px;
+}
+.info-content{
+    display: flex;
+}
+.info-content>h2{
+    font-size: 35px;
+}
+.info-content>p{
+    margin-top: 4px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.location>p{
+    margin-top: -10px;
+    font-size: 13px;
+}
+.btn-book{
+    position: absolute;
+    margin-left: 400px !important;
+    margin-top: 40px;
+}
+
+
 
 
 
