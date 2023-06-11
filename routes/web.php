@@ -25,7 +25,7 @@ Route::prefix('/')->group(function() {
     Route::get('/profile', [NavbarController::class,'profile']);
 });
 Route::get('/', [CategorybarController::class,'all'])->name('home');
-Route::get('/', [ConcertController::class, 'showconcert']);
+Route::get('/', [ConcertController::class, 'showconcert'])->name('home');
 Route::prefix('/category')->group(function() {
     Route::get('/kpop', [CategorybarController::class,'kpop'])->name('kpop');
     Route::get('/festivalmusic', [CategorybarController::class,'festivalmusic'])->name('festMusic');

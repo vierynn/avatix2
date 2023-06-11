@@ -22,6 +22,7 @@ class CreateConcertsTable extends Migration
             $table->string('status');
             $table->string('location');
             $table->text('description');
+            $table->string('image_path');
         });
     }
 

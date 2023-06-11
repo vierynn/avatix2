@@ -153,31 +153,14 @@
                       <time>31</time>
                     </button>
                 </div>
-              </div>
-          </div>
-          <div class="col custom-col2">
-            <div class="search-bar">
-                <div class="search-logo">
-                    <img src="{{asset('img/icon-search.png')}}" alt="">
-                </div>
-                <div class="main">
-                    <div class="form-group has-search">
-                      <span class="fa fa-search form-control-feedback"></span>
-                      <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                </div>
             </div>
-            @yield('concert')
-          </div>
-          {{-- <div class="col-6">KOSONG</div> --}}
-          <div class="col custom-col3">
             <div class="filter-box">
                 <div class="filter-content">
                     <h3>Filter</h3>
                     <div class="price-range">
                         <h5>Price Range</h5>
                         <div class="slider-box">
-                            <label for="priceRange"></label>
+                            <label for="priceRange">4</label>
                             <input type="text" id="priceRange" readonly>
                             <div id="price-range" class="slider"></div>
                         </div>
@@ -212,7 +195,7 @@
                             <div class="form-check radio-btn-custom">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                                 <label class="form-check-label" for="exampleRadios1">
-                                  Tanggerang
+                                  Tangerang
                                 </label>
                             </div>
                         </form>
@@ -245,6 +228,23 @@
                     </form>
                 </div>
             </div>
+          </div>
+          <div class="col custom-col2">
+            <div class="search-bar">
+                <div class="search-logo">
+                    <img src="{{asset('img/icon-search.png')}}" alt="">
+                </div>
+                <div class="main">
+                    <div class="form-group has-search">
+                      <span class="fa fa-search form-control-feedback"></span>
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+            @yield('concert')
+          </div>
+          <div class="col custom-col3 position fixed">
+
           </div>
         </div>
       </div>
