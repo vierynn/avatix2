@@ -10,13 +10,13 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body cards-content">
-                    <h5 class="card-title">{{$concert->name}}</h5>
+                    <h6 class="card-title">{{$concert->artist}}{{$concert->name}}</h6>
                     <p class="card-text">{{$concert->description}}</p>
                     </div>
                 </div>
                 <div class="information-concert position-absolute">
                     <div class="info-content">
-                        <h2>23-24</h2>
+                        <h2></h2>
                         <p>March <br> 2023</p>
                     </div>
                     <div class="location">

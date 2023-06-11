@@ -15,8 +15,8 @@ class ConcertSeeder extends Seeder
     public function run()
     {
         DB::table('concerts')->insert([
-            'name'=>'COLDPLAY: MUSIC OF THE SPHERES',
-            'artist'=>'Coldplay',
+            'name'=>':MUSIC OF THE SPHERES',
+            'artist'=>'COLDPLAY',
             'type'=>'International',
             'status'=>'Opened',
             'location'=>'Jakarta',
@@ -28,8 +28,8 @@ class ConcertSeeder extends Seeder
          ]);
 
         DB::table('concerts')->insert([
-            'name'=>'BORN PINK',
-            'artist'=>'Blackpink',
+            'name'=>':BORN PINK',
+            'artist'=>'BLACKPINK',
             'type'=>'K-Pop',
             'status'=>'Opened',
             'location'=>'Jakarta',
@@ -38,8 +38,8 @@ class ConcertSeeder extends Seeder
         ]);
 
         DB::table('concerts')->insert([
-            'name'=>'PERTUNJUKAN TUTUR BATIN LIVE CONCERT 2023',
-            'artist'=>'Yura Yunita',
+            'name'=>':PERTUNJUKAN TUTUR BATIN LIVE CONCERT 2023',
+            'artist'=>'YURA YUNITA',
             'type'=>'Indonesian',
             'status'=>'Opened',
             'location'=>'Surabaya',
@@ -50,7 +50,7 @@ class ConcertSeeder extends Seeder
     ]);
 
         DB::table('concerts')->insert([
-            'name'=>'NICOLE WORLD TOUR 2023',
+            'name'=>':NICOLE WORLD TOUR 2023',
             'artist'=>'NIKI',
             'type'=>'International',
             'status'=>'Opened',
@@ -71,8 +71,8 @@ class ConcertSeeder extends Seeder
         ]);
 
         DB::table('concerts')->insert([
-            'name'=>'SLANK 25TH ANNIVERSARY TOUR',
-            'artist'=>'Slank',
+            'name'=>':SLANK 25TH ANNIVERSARY TOUR',
+            'artist'=>'SLANK',
             'type'=>'Indonesian',
             'status'=>'Opened',
             'location'=>'Bandung',
