@@ -411,3 +411,180 @@
     margin-left: 980px;
     margin-top: -95px;
 }
+
+/* LOGIN & SIGNUP */
+#form-login{
+    background-color: rgb(222, 222, 222);
+    border-top-color: rgb(185, 185, 185);
+    border-top-width: 3.5px;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.login-btn{
+    background-color: rgb(249, 154, 201);
+    color: white;
+    border-radius: 50px;
+    border-top-color: rgb(225, 111, 198);
+    border-top-width: 3.5px;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    width: 255px;
+}
+
+.login-icon-img{
+    width: 1px;
+    height: auto;
+}
+
+#bg-login{
+    background-image: linear-gradient(black, black, rgb(225, 111, 198));
+}
+
+/* PROFILE */
+.notif{
+    padding-right: 10px;
+    width: 90%;
+}
+.nicholas{
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 10%;
+}
+
+.soob-img{
+    width: 1px;
+    height: auto;
+    margin-left: 75px;
+}
+
+.edit-btn{
+    background-color: #fe75c7;
+    width: 120px;
+    height: 37px;
+    border-radius: 5px;
+    border-width: 0px;
+    color: white;
+}
+
+.profile-text1{
+    font-size: 18px;
+    text-align:left;
+    color:#7b7b7b;
+    line-height: 60%;
+}
+
+.profile-text2{
+    font-size: 18px;
+    text-align:left;
+    color:black;
+    line-height: 60%;
+}
+
+.dropdown-arrow-profile{
+    width: 2%;
+    display: inline-block;
+    margin-top: -10px;
+    margin-left: 875px;
+}
+
+.about-us-line{
+    border-top: 0.5px solid #979797;
+    width: 85%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+/* PROFILE */
+.purchase-line-1{
+    border-top: 0.5px solid #979797;
+    width: 85%;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.bornpink-img{
+    width: 10%;
+}
+
+.dropdown-arrow-purchase{
+    width: 3%;
+    display: inline-block;
+    margin-top: -4px;
+    margin-left: 290px;
+}
+
+.payment-details-line{
+    border-top: 0.5px solid #979797;
+    width: 91%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#form-purchase{
+    border-color: black;
+    border-width: 1px;
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+.payment-method-logo{
+    width: 100px;
+    position: absolute;
+}
+
+#result{
+    border-width: 0px;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 105px;
+    text-align: right;
+    height: 14px;
+}
+
+#admin{
+    border-width: 0px;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 167px;
+    text-align: right;
+    height: 12px;
+}
+
+.purchase-line-2{
+    border-top: 0.5px solid #979797;
+    width: 92%;
+    margin-bottom: 20px;
+}
+
+#total{
+    border-width: 0px;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 77px;
+    text-align: right;
+    height: 16px;
+}
+
+.purchase-btn{
+    border-radius: 5px;
+    background-color: white;
+    border-color: #fe75c7;
+    border-width: 0.5px;
+    color: #fe75c7;
+    box-shadow: 0 1px 2px 0 #979797;
+    width: 170px;
+    height: 35px;
+    margin-left: 91px;
+    margin-top: 20px;
+    font-size: 14px;
+}
