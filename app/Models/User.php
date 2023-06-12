@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use App\Models\Concerts;
 use App\Models\Transaction;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -20,11 +19,6 @@ class User extends Authenticatable
         'email',
         'password'
     ];
-
-    public function concerts()
-    {
-        return $this->hasMany(Concerts::class);
-    }
 
     public function transactions()
     {

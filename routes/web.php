@@ -40,3 +40,5 @@ Route::get('/bookedpage',function(){
 Route::get('/bookdetail',function(){
     return view('bookdetail');
 });
+Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])
+        ->name('bookedpage.show');

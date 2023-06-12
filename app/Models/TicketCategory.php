@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Models;
-use App\Models\Ticket;
+use App\Models\Transaction;
+use App\Models\Concerts;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,9 +22,13 @@ class TicketCategory extends Model
         'concert_id'
     ];
 
-    public function ticket()
+    public function concerts()
     {
-        return $this->hasMany(Ticket::class);
+        return $this->belongsTo(Concerts::class, 'id');
+    }
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'id', 'ticketcat_id');
     }
 }
 

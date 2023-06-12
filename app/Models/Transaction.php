@@ -2,8 +2,7 @@
 
 namespace App\Models;
 use App\Models\User;
-use App\Models\Concerts;
-use App\Models\Ticket;
+use App\Models\TicketCategory;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -18,21 +17,17 @@ class Transaction extends Model
         'promo',
         'date',
         'user_id',
-        'ticket_id'
+        'ticket_id',
+        'quantity'
     ];
-
-    public function concerts()
-    {
-        return $this->belongsTo(Concerts::class);
-    }
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'id');
     }
 
     public function ticket()
     {
-        return $this->belongsTo(Ticket::class);
+        return $this->belongsTo(TicketCategory::class, 'id');
     }
 }

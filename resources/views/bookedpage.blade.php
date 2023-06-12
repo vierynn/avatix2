@@ -9,9 +9,9 @@
     <div class="content-book">
         <div class="content d-flex">
             <div class="name-booked position-relative">
-                <h3>BLACKPINK:BORN-PINK</h3>
-                <p style="color: grey"><b>JAKARTA PUSAT, INDONESIA</b></p>
-                <p style="color: red"><b>Non-Refunable</b></p>
+                <h3>{{$concert->artist}}{{$concert->name}}</h3>
+                <p style="color: grey"><b>{{$concert->city}}</b></p>
+                <p style="color: red"><b>Non-Refundable</b></p>
                 <form action="btn-book">
                     <a href="/bookdetail"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
                 </form>
@@ -19,10 +19,10 @@
             <div class="description-concert position absolute">
                 <hr style="width: 700px">
                 <h5 class="mb-3">Description</h5>
-                <p>Grup K-pop legendaris, BLACKPINK akan datang kembali ke Jakarta untuk mempromosikan album terbaru mereka, BORN PINK melalui tur dunia mereka yang bertajuk, BLACKPINK WORLD TOUR [BORN PINK]. Grup beranggotakan empat orang ini akan menyapa BLINK Indonesia selama dua hari!</p>
+                <p>{{$concert->description}}</p>
             </div>
             <div class="poster position-absolute" style="margin-left: 730px;">
-                <img src="{{asset('img/blackpink.png')}}" alt="">
+                <img src="{{$concert->image_path}}" alt="">
             </div>
         </div>
         <hr style="margin-top: 30px; width: 1400px">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="location-concert">
                     <p style="margin-bottom: 0px;"><b>LOCATION</b></p>
-                    <p>Gelora Bung Karno Main Stadium</p>
+                    <p>{{$concert->place}}</p>
                 </div>
                 <div class="duration-concert">
                     <p style="margin-bottom: 0px;"><b>DURATION</b></p>
@@ -55,7 +55,7 @@
                     CAT 4: IDR 1.350.000</P>
             </div>
             <div class="seatplan-img">
-                <img src="{{asset('img/seatplan_blackpink.jpg')}}" alt="">
+                <img src="{{$concert->seatplan_path}}" alt="">
             </div>
         </div>
 

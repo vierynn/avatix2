@@ -28,6 +28,7 @@ class CreateConcertsTable extends Migration
             $table->string('place');
             $table->text('description');
             $table->string('image_path');
+            $table->string('seatplan_path');
         });
     }
 
