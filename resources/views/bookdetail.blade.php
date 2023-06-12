@@ -93,6 +93,20 @@
               </div>
             </div>
           </div>
+        <div class="list-category-seat">
+            <div class="seat-content">
+                <div class="card" style="width: 1260px; margin-left: 40px; margin-top: 30px; margin-bottom: 20px; padding: 20px; height: 160px;">
+                    <div class="card-body">
+                      <h5 class="card-title">VIP - IDR 3.800.000</h5>
+                      <div class="status-seat">
+                        <p>Available</p>
+                      </div>
+                      <a href="#" class="btn btn-light btn-seat">Book</a>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+        </div>
     </div>
 </body>
 <x-footer/>

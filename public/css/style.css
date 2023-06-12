@@ -260,69 +260,9 @@
         .price-range{
             margin-bottom: 20px;
         }
-        .slider-box {
-            width: 30%;
-            margin: 25px auto;
-        }
-
-        label,
-        input {
-            border: none;
-            display: inline-block;
-            vertical-align: top;
-            width: 30%;
-        }
-
-        input {
-            width: 70%;
-        }
-
-        .slider {
-            margin: 25px 0;
-            height: 14px;
-            border: 0;
-            background: #66c5c8;
-            border-radius: 14px;
-        }
-        .ui-slider-horizontal .ui-slider-handle {
-            width: 34px;
-            height: 34px;
-            left: -17px;
-            top: -10px;
-            -webkit-border-radius: 34px;
-            border-radius: 34px;
-            background: #000000 !important;
-            cursor: default;
-            -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-            cursor: col-resize;
-        }
-        .ui-slider-horizontal .ui-slider-range {
-            background: #000000;
-            border-radius: 14px;
-        }
-
-        span.ui-slider-handle.ui-state-default.ui-corner-all:before,
-        span.ui-slider-handle.ui-state-default.ui-corner-all:after {
-            content: "";
-            display: block;
-            position: absolute;
-            height: 12px;
-            width: 1px;
-            background: #000000;
-            left: 15px;
-            top: 11px;
-        }
-        span.ui-slider-handle.ui-state-default.ui-corner-all:after {
-            left: 18px;
-        }
-
-          /* LOCATION */
-        .radio-btn-custom{
-            margin-top: 10px;
-        }
-        .type-filter>h5{
-            margin-top: 20px;
+        #custom-color{
+            color: #000000 !important;
+            background-color: #000000 !important;
         }
 .btn-custom{
     margin-top: 30px;
@@ -447,4 +387,27 @@
     color: grey !important;
     margin-bottom: 10px;
     text-align: justify;
+}
+.status-seat{
+    border-color: #FF6FC5;
+    width: 100px;
+    border-style: solid;
+    border-radius: 7px;
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+}
+.status-seat>p{
+    margin-top: 5px;
+    margin-left: 38px;
+    color: #FF45B5;
+}
+.btn-seat{
+    background-color: #FF45B5 !important;
+    width: 200px;
+    height: 40px;
+    border-radius: 7px;
+    color: white;
+    margin-left: 980px;
+    margin-top: -95px;
 }
