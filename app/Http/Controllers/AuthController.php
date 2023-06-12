@@ -23,7 +23,7 @@ class AuthController extends Controller
     public function postLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'username' => 'required',
             'password' => 'required',
         ]);
    
@@ -66,6 +66,7 @@ class AuthController extends Controller
         'firstName' => $data['firstName'],
         'lastName' => $data['lastName'],
         'email' => $data['email'],
+        'username' => $data['username'],
         'password' => Hash::make($data['password'])
       ]);
     }
