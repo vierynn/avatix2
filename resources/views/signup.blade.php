@@ -19,26 +19,42 @@
                 </div>
                 <div class="col-lg-6" style="width: 42%; margin-left: 125px;">
                     <p style="font-size: 22px; text-align:center;">SignUp</p>
-                    <form action="post">
+                    <form action="{{ route('signup.post') }}" method="post">
+                        @csrf
                         <div class="form-group">
                             <label for="firstname" style="font-size: 14px;">First Name</label>
-                            <input class="form-control" type="text" name="firstname" id="form-login">
+                            <input class="form-control" type="text" name="firstname" id="form-login" required>
+                            @if ($errors->has('firstname'))
+                            <span class="text-danger">{{ $errors->first('firstname') }}</span>
+                            @endif
                         </div>
                         <div class="form-group">
-                            <label for="username" style="font-size: 14px;">Username</label>
-                            <input class="form-control" type="text" name="username" id="form-login">
+                            <label for="lastname" style="font-size: 14px;">Last Name</label>
+                            <input class="form-control" type="text" name="lastname" id="form-login" required>
+                            @if ($errors->has('lastname'))
+                            <span class="text-danger">{{ $errors->first('lastname') }}</span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="email" style="font-size: 14px;">Email</label>
-                            <input class="form-control" type="email" name="email" id="form-login">
+                            <input class="form-control" type="email" name="email" id="form-login" required>
+                            @if ($errors->has('email'))
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="username" style="font-size: 14px;">Username</label>
-                            <input class="form-control" type="text" name="username" id="form-login">
+                            <input class="form-control" type="text" name="username" id="form-login" required>
+                            @if ($errors->has('username'))
+                            <span class="text-danger">{{ $errors->first('username') }}</span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="password" style="font-size: 14px;">Password</label>
-                            <input class="form-control" type="password" name="password" id="form-login">
+                            <input class="form-control" type="password" name="password" id="form-login" required>
+                            @if ($errors->has('password'))
+                            <span class="text-danger">{{ $errors->first('password') }}</span>
+                            @endif
                         </div>
                         <br>
                         <button type="submit" class="login-btn"><b>SIGNUP</b></button>

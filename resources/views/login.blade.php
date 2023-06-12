@@ -20,13 +20,20 @@
                 <div class="col-lg-6" style="width: 42%; margin-left: 125px;">
                     <p style="font-size: 22px; text-align:center;">Login</p>
                     <form action="post">
+                        @csrf
                         <div class="form-group">
                             <label for="username" style="font-size: 14px;">Username</label>
-                            <input class="form-control" type="text" name="username" id="form-login">
+                            <input class="form-control" type="text" name="username" id="form-login" required>
+                            @if ($errors->has('username'))
+                                <span class="text-danger">{{ $errors->first('username') }}</span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="password" style="font-size: 14px;">Password</label>
-                            <input class="form-control" type="password" name="password" id="form-login">
+                            <input class="form-control" type="password" name="password" id="form-login" required>
+                            @if ($errors->has('password'))
+                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                            @endif
                         </div>
                         <p style="text-decoration: underline; font-size:11px; text-align:right;"><a href="#" style="color: black;">Forgot Password?</a></p>
                         <button type="submit" class="login-btn"><b>LOGIN</b></button>
