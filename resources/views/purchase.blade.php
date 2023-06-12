@@ -81,16 +81,16 @@
                         <br>
                         <div style="line-height: 8px">
                             <p style="font-size: 14px; display: inline-block;">Ticket Price</p>
-                            <input type="text" id="result">
+                            <input type="text" id="result" style="margin-left: 160px">
                         </div>
                         <div style="line-height: 8px">
                             <p style="font-size: 12px; display: inline-block;">Admin</p>
-                            <input type="text" id="admin">
+                            <input type="text" id="admin" style="margin-left: 215px">
                         </div>
                         <div class="purchase-line-2"></div>
                         <div style="line-height: 8px">
                             <p style="font-size: 16px; display: inline-block;"><b>Total Price</b></p>
-                            <input type="text" id="total">
+                            <input type="text" id="total" style="margin-left: 130px">
                         </div>
                         <button type="submit" class="purchase-btn">PURCHASE NOW</button>
                     </form>

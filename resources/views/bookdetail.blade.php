@@ -9,11 +9,11 @@
     <div class="content-book">
         <div class="content d-flex">
             <div class="name-booked position-relative">
-                <h3>BLACKPINK:BORN-PINK</h3>
+                <h3>BLACKPINK: BORN-PINK</h3>
                 <p style="color: grey"><b>JAKARTA PUSAT, INDONESIA</b></p>
                 <p style="color: red"><b>Non-Refunable</b></p>
                 <form action="btn-book">
-                    <a href="/bookdetail"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
+                    <a href="/ticket"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
                 </form>
             </div>
             <div class="date-concert" style="margin-left: 870px; margin-top: 108px">
@@ -24,11 +24,11 @@
         <div class="price-list-content">
             <div class="price-list-text">
                 <h5 style="margin-bottom: 15px;">PRICELIST</h5>
-                <P>VIP  : IDR 3.800.000
-                    PLATINUM: IDR 3.400.000
-                    CAT 1 : IDR 2.900.000
-                    CAT 2: IDR 2.600.000
-                    CAT 3: IDR 2.100.000
+                <P>VIP  : IDR 3.800.000 <br>
+                    PLATINUM: IDR 3.400.000 <br>
+                    CAT 1 : IDR 2.900.000 <br>
+                    CAT 2: IDR 2.600.000 <br>
+                    CAT 3: IDR 2.100.000 <br>
                     CAT 4: IDR 1.350.000</P>
             </div>
             <div class="seatplan-img">
