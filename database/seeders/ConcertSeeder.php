@@ -22,6 +22,8 @@ class ConcertSeeder extends Seeder
             'day'=>'WEDNESDAY',
             'date'=>'15',
             'month'=>'November',
+            'start_time'=>'17:00 WIB',
+            'duration'=>'4 hours',
             'year'=>'2023',
             'city'=>'Jakarta',
             'place'=>'Gelora Bung Karno Main Stadium',
@@ -41,6 +43,8 @@ class ConcertSeeder extends Seeder
             'date'=>'11',
             'month'=>'March',
             'year'=>'2023',
+            'start_time'=>'19:00 WIB',
+            'duration'=>'2 hours',
             'city'=>'Jakarta',
             'place'=> 'Gelora Bung Karno Main Stadium',
             'description'=>'Legendary K-Pop Group, BLACKPINK will be back in Jakarta to promote their new album, BORN PINK through a world tour with the name, BLACKPINK WORLD TOUR [BORN PINK].
@@ -57,6 +61,8 @@ class ConcertSeeder extends Seeder
             'date'=>'12',
             'month'=>'March',
             'year'=>'2023',
+            'start_time'=>'18:30 WIB',
+            'duration'=>'2 hours',
             'city'=>'Jakarta',
             'place'=> 'Gelora Bung Karno Main Stadium',
             'description'=>'Legendary K-Pop Group, BLACKPINK will be back in Jakarta to promote their new album, BORN PINK through a world tour with the name, BLACKPINK WORLD TOUR [BORN PINK].
@@ -74,6 +80,8 @@ class ConcertSeeder extends Seeder
             'date'=>'09',
             'month'=>'June',
             'year'=>'2023',
+            'start_time'=>'13:00 WIB',
+            'duration'=>'3 hours',
             'city'=>'Surabaya',
             'place'=>'Jatim International Expo(JIE) Convention Exhibition',
             'description'=>'Yura Yunita is ready to celebrate magic from her third album, Tutur Batin in a solo concert titled Pertunjukkan Tutur Batin.
@@ -91,6 +99,8 @@ class ConcertSeeder extends Seeder
             'date'=>'26',
             'month'=>'September',
             'year'=>'2023',
+            'start_time'=>'18:00 WIB',
+            'duration'=>'2 hours',
             'city'=>'Bali',
             'place'=>'Garuda Wisnu Kencana',
             'description'=>'For the first time, the beautiful singer Nicole Zefanya or NIKI will finally return to her hometown in Indonesia by holding a concert in Jakarta.
@@ -107,6 +117,8 @@ class ConcertSeeder extends Seeder
             'date'=>'21',
             'month'=>'July',
             'year'=>'2023',
+            'start_time'=>'16:00 WIB',
+            'duration'=>'5 hours',
             'city'=>'Tangerang',
             'place'=>'Indonesia Convention Exhibition BSD',
             'description'=>'We The Fest is an annual music, art, fashion and food festival held in Jakarta.
@@ -122,6 +134,8 @@ class ConcertSeeder extends Seeder
             'date'=>'22',
             'month'=>'July',
             'year'=>'2023',
+            'start_time'=>'16:00 WIB',
+            'duration'=>'5 hours',
             'city'=>'Tangerang',
             'place'=>'Indonesia Convention Exhibition BSD',
             'description'=>'We The Fest is an annual music, art, fashion and food festival held in Jakarta.
@@ -137,6 +151,8 @@ class ConcertSeeder extends Seeder
             'date'=>'22',
             'month'=>'July',
             'year'=>'2023',
+            'start_time'=>'16:00 WIB',
+            'duration'=>'5 hours',
             'city'=>'Tangerang',
             'place'=>'Indonesia Convention Exhibition BSD',
             'description'=>'We The Fest is an annual music, art, fashion and food festival held in Jakarta.
@@ -154,6 +170,8 @@ class ConcertSeeder extends Seeder
             'date'=>'13',
             'month'=>'Mei',
             'year'=>'2023',
+            'start_time'=>'5:00 WIB',
+            'duration'=>'2 hours',
             'city'=>'Bandung',
             'place'=>'Eldorado Dome Bandung',
             'description'=>'Album Tujuh 25th Anniversary Tour continues in the fifth city, namely, Bandung.
