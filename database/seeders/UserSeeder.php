@@ -18,13 +18,17 @@ class UserSeeder extends Seeder
             'firstName'=>'Vico',
             'lastName'=>'Lomar',
             'email'=>'vicolomar@gmail.com',
-            'password'=>'vicolomar123'
+            'username'=>'vicolomar',
+            'password'=>'vicolomar123',
+            'profile_pic'=> 'img/vico.jpg'
         ]);
         DB::table('users')->insert([
             'firstName'=>'Fei Fei',
             'lastName'=>'Li',
             'email'=>'fefefefeilili@gmail.com',
-            'password'=>'mwahhh112'
+            'username'=>'feifeili',
+            'password'=>'mwahhh112',
+            'profile_pic'=> 'img/fei.jpg'
         ]);
     }
 }

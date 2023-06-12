@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategorybarController;
 use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\ConcertController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// test
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('/post-login', [AuthController::class, 'postLogin'])->name('login.post');
+Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+Route::post('/post-signup', [AuthController::class, 'postSignup'])->name('signup.post');
+Route::get('/dashboard', [AuthController::class, 'dashboard']);
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
 Route::prefix('/')->group(function() {
     Route::get('/', function () {
         return view('home');
@@ -44,4 +54,7 @@ Route::get('/ticket',function(){
     return view('ticket');
 });
 Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])->name('bookedpage.show');
+
+
+
 
