@@ -23,6 +23,8 @@ class CreateConcertsTable extends Migration
             $table->string('day');
             $table->integer('date');
             $table->string('month');
+            $table->string('start_time');
+            $table->string('duration');
             $table->integer('year');
             $table->string('city');
             $table->string('place');

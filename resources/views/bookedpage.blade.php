@@ -31,7 +31,7 @@
             <div class="information-content d-flex">
                 <div class="date-concert">
                     <p style="margin-bottom: 0px;"><b>DATE</b></p>
-                    <p>SATURDAY, 11 March 2023 19:00 WIB <br>SUNDAY, 12 March 2023 18:30 WIB</p>
+                    <p>{{$concert->day}}, {{$concert->date}} {{$concert->month}} {{$concert->year}} {{$concert->start_time}} </p>
                 </div>
                 <div class="location-concert">
                     <p style="margin-bottom: 0px;"><b>LOCATION</b></p>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="duration-concert">
                     <p style="margin-bottom: 0px;"><b>DURATION</b></p>
-                    <p>2 Hours</p>
+                    <p>{{$concert->duration}}</p>
                 </div>
             </div>
         </div>
