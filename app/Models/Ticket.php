@@ -5,6 +5,7 @@ use App\Models\User;
 use App\Models\Transaction;
 use App\Models\Ticket;
 use App\Models\TicketCategory;
+use App\Models\Concerts;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -32,6 +33,10 @@ class Ticket extends Model
     public function ticketcategory()
     {
         return $this->belongsTo(TicketCategory::class);
+    }
+    public function concerts()
+    {
+        return $this->belongsTo(Concerts::class);
     }
 }
 

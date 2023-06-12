@@ -27,7 +27,7 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
    
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('username', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
                         ->withSuccess('Login Successful');
@@ -36,12 +36,13 @@ class AuthController extends Controller
         return redirect("login")->withSuccess('Invalid Credentials');
     }
 
-    public function postRegistration(Request $request)
+    public function postSignup(Request $request)
     {  
         $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
             'email' => 'required|email|unique:users',
+            'username' => 'required|unique:users',
             'password' => 'required|min:6',
         ]);
            
@@ -75,6 +76,6 @@ class AuthController extends Controller
         Session::flush();
         Auth::logout();
   
-        return Redirect('login');
+        return redirect('login');
     }
 }

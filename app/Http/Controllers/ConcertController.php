@@ -30,6 +30,5 @@ class ConcertController extends Controller
             'ticket' => $ticket,
             'concert' => $concert
         ]);
- 
     }
 }
