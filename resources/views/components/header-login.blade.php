@@ -3,7 +3,7 @@
         <div class="logo-img">
             <img src="{{asset('img/avatix.png')}}" alt="">
         </div>
-        <form class="d-flex">
+        <form class="d-flex" action="{{ route('login') }}">
             <button class="btn-primary btn-login" type="submit">Login</button>
         </form>
     </div>

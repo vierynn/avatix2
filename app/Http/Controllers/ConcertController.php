@@ -30,19 +30,6 @@ class ConcertController extends Controller
             'ticket' => $ticket,
             'concert' => $concert
         ]);
-    }
-    public function bookdetail($id=null)
-    {
-        if ($id):
-            $concert = Concerts::find($id);
-            $ticket = TicketCategory::with('concerts')->find($id);
-        else:
-            $concert = Concerts::with('concert_id')->all();
-            $ticket = TicketCategory::with('concerts')->all();
-        endif;
-        return view('bookdetail', [
-            'ticket' => $ticket,
-            'concert' => $concert
-        ]);
+
     }
 }

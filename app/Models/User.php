@@ -17,7 +17,9 @@ class User extends Authenticatable
         'firstName',
         'lastName',
         'email',
-        'password'
+        'username',
+        'password',
+        'profile_pic'
     ];
 
     public function transactions()
