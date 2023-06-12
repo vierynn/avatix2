@@ -25,7 +25,7 @@
       <div class="category-bar category-box">
         <ul class="nav nav-pills category-sentence">
             <li class="nav-item">
-              <a class="{{Illuminate\Support\Facades\Route::currentRouteName() == 'home' ? 'nav-link active custom-color-active' : 'nav-link'}}" aria-current="page" href="/">All</a>
+              <a class="{{Illuminate\Support\Facades\Route::currentRouteName() == 'home' ? 'nav-link active custom-color-active' : 'nav-link'}}" aria-current="page" href="/home">All</a>
             </li>
             <li class="nav-item">
               <a class="{{Illuminate\Support\Facades\Route::currentRouteName() == 'kpop' ? 'nav-link active custom-color-active' : 'nav-link'}}" href="/category/kpop">Kpop</a>

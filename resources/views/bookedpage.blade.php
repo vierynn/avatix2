@@ -22,7 +22,8 @@
                 <p>{{$concert->description}}</p>
             </div>
             <div class="poster position-absolute" style="margin-left: 730px;">
-                <img src="{{$concert->image_path}}" alt="">
+                <img src="{{asset('img/'.$concert->image_path)}}" alt="">
+                {{-- <img src="{{$concert->image_path}}" alt=""> --}}
                 dd({{$concert->image_path}})
             </div>
         </div>

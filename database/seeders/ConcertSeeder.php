@@ -179,5 +179,23 @@ class ConcertSeeder extends Seeder
             'image_path'=>'img/slank.jpg',
             'seatplan_path'=>'img/seatplan_slank.jpg'
         ]);
+
+        DB::table('concerts')->insert([
+            'name'=>': ASIA TOUR IN JAKARTA',
+            'artist'=>'KIM SEON HO',
+            'type'=>'K-pop',
+            'status'=>'Opened',
+            'day'=>'SATURDAY',
+            'date'=>'3',
+            'month'=>'June',
+            'year'=>'2023',
+            'start_time'=>'19:00 WIB',
+            'duration'=>'2 hours',
+            'city'=>'Jskarta',
+            'place'=>'Tennis Indoor Senayan',
+            'description'=>"The Korean artist's fanmeet schedule in Indonesia was then filled by Kim Seon-ho. After being on hiatus for about a year, the actor who will be starring in the film Sad Tropics is ready to hold a fan meeting in the Asian region in an event titled ASIA TOUR IN JAKARTA.",
+            'image_path'=>'img/kim_seon_ho.png',
+            'seatplan_path'=>'img/seatplan_kim_seon_hp.jpg'
+        ]);
     }
 }

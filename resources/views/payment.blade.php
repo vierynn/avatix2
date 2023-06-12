@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Purchase')
+@section('title', 'Payment')
 
 @section('content')
 
@@ -92,7 +92,7 @@
                             <p style="font-size: 16px; display: inline-block;"><b>Total Price</b></p>
                             <input type="text" id="total">
                         </div>
-                        <button type="submit" class="purchase-btn">PURCHASE NOW</button>
+                            <a href="/ticket"><button type="submit" class="purchase-btn">PURCHASE NOW</button></a>
                     </form>
                 </div>
             </div>

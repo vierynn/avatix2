@@ -27,7 +27,7 @@ Route::get('/dashboard', [AuthController::class, 'dashboard']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::prefix('/')->group(function() {
-    Route::get('/', function () {
+    Route::get('/home', function () {
         return view('home');
     })->name('home');
     Route::get('/history', [NavbarController::class,'history'])->name('history');
@@ -35,8 +35,8 @@ Route::prefix('/')->group(function() {
     Route::get('/notification', [NavbarController::class,'notification']);
     Route::get('/profile', [NavbarController::class,'profile']);
 });
-Route::get('/', [CategorybarController::class,'all'])->name('home');
-Route::get('/', [ConcertController::class, 'showconcert'])->name('home');
+Route::get('/home', [CategorybarController::class,'all'])->name('home');
+Route::get('/home', [ConcertController::class, 'showconcert'])->name('home');
 // Route::get('/', [ConcertController::class, 'info']);
 Route::prefix('/category')->group(function() {
     Route::get('/kpop', [CategorybarController::class,'kpop'])->name('kpop');
@@ -50,5 +50,8 @@ Route::get('/bookdetail',function(){
 });
 Route::get('/ticket',function(){
     return view('ticket');
+});
+Route::get('/payment',function(){
+    return view('payment');
 });
 Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])->name('bookedpage.show');

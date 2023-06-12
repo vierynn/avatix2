@@ -13,7 +13,7 @@
                 <p style="color: grey"><b>JAKARTA PUSAT, INDONESIA</b></p>
                 <p style="color: red"><b>Non-Refunable</b></p>
                 <form action="btn-book">
-                    <a href="/ticket"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
+                    <a href="/payment"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
                 </form>
             </div>
             <div class="date-concert" style="margin-left: 870px; margin-top: 108px">
