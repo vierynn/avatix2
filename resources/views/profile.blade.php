@@ -38,8 +38,18 @@
     </div>
 
     <div>
-        <b><h4 style="margin-left: 125px; display: inline-block;">About Us</h4></b>
-        <img src="{{asset('img/dropdown-arrow.png')}}" alt="" class="dropdown-arrow-profile">
+        <div class="accordion-item" style="padding-left: 150px; padding-right: 120px">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <h5><b>About Us</b></h5>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <p style="color: grey">Avatix is a platform where tickets of concerts or music festivals are sold. Here, we have a purpose of make things easier for customers to view different concerts or music festivals and purchase tickets. We're dedicated to providing the best kind of concert tickets.</p>
+              </div>
+            </div>
+        </div>
     </div>
 
     <div class="about-us-line"></div>

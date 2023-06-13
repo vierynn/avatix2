@@ -31,7 +31,7 @@
             <div class="information-content d-flex">
                 <div class="date-concert">
                     <p style="margin-bottom: 0px;"><b>DATE</b></p>
-                    <p>{{$concert->day}}, {{$concert->date}} {{$concert->month}} {{$concert->year}} {{$concert->start_time}} </p>
+                    <p>{{$concert->day}}, {{$concert->date}} {{$concert->month}} {{$concert->year}} {{$concert->start_time}}</p>
                 </div>
                 <div class="location-concert">
                     <p style="margin-bottom: 0px;"><b>LOCATION</b></p>
@@ -52,7 +52,8 @@
                 @endforeach
             </div>
             <div class="seatplan-img">
-                <img src="{{$concert->seatplan_path}}" alt="">
+                {{-- <img src="{{asset('img/seatplan_blackpink.jpg')}}" alt=""> --}}
+                <img src="{{asset($concert->seatplan_path)}}" alt="">
             </div>
         </div>
 

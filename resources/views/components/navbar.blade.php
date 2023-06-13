@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse navbar-links" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="{{Illuminate\Support\Facades\Route::currentRouteName() == 'home' ? 'nav-link active fw-bold' : 'nav-link'}}" aria-current="page" href="/">Home</a>
+            <a class="{{Illuminate\Support\Facades\Route::currentRouteName() == 'home' ? 'nav-link active fw-bold' : 'nav-link'}}" aria-current="page" href="/home">Home</a>
             </li>
             <li class="nav-item">
                 <a class="{{Illuminate\Support\Facades\Route::currentRouteName() == 'history' ? 'nav-link active fw-bold' : 'nav-link'}}" aria-current="page" href="/history">History</a>

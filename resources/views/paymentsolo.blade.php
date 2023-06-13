@@ -8,15 +8,15 @@
 
 <body>
     <div>
-        <h4 style="margin-top: 50px; margin-left: 92px;">BLACKPINK: BORN PINK</h4>
+        <h4 style="margin-top: 50px; margin-left: 92px;">{{$ticket->concerts->artist}}{{$ticket->concerts->name}}</h4>
     </div>
     <div>
-        <h6 style="margin-left: 92px; color: #606060; display: inline-block; line-height: 60%;">JAKARTA PUSAT, INDONESIA</h6>
-        <p style="display: inline-block; margin-left: 617px; line-height: 60%;"><small>SATURDAY, 11 MARCH 2023 19:00 WIB</small></p>
+        <h6 style="margin-left: 92px; color: #606060; display: inline-block; line-height: 60%;">{{$ticket->concerts->city}}</h6>
+        <p style="display: inline-block; margin-left: 617px; line-height: 60%;"><small>{{$ticket->concerts->day}}, {{$ticket->concerts->date}} {{$ticket->concerts->month}} {{$ticket->concerts->year}} {{$ticket->concerts->start_time}}</small></p>
     </div>
     <div>
         <h6 style="margin-left: 92px; color: red; display: inline-block; line-height: 60%;"><b>Non-Refundable</b></h6>
-        <p style="display: inline-block; margin-left: 715.5px; line-height: 60%;"><small>SUNDAY, 12 MARCH 2023 18:30 WIB</small></p>
+        <p style="display: inline-block; margin-left: 715.5px; line-height: 60%;"></p>
     </div>
 
     <div class="purchase-line-1"></div>
@@ -64,15 +64,7 @@
                     <form action="post" style="margin-left: 25px; margin-top: 25px;">
                         <div class="form-group">
                             <label for="seat" style="font-size: 14px; margin-bottom: 5px;">Select Seat</label>
-                            <select onchange="purchase()" class="form-select" aria-label="Default select example" name="seat" id="seat" min="1" max="4" style="border-color: black; border-width: 1px; width: 92%; margin-bottom: 5px;">
-                                <option selected></option>
-                                <option value="vip">VIP - IDR 3.800.000</option>
-                                <option value="platinum">PLATINUM - IDR 3.400.000</option>
-                                <option value="cat1">CAT 1 - IDR 2.900.000</option>
-                                <option value="cat2">CAT 2 - IDR 2.600.000</option>
-                                <option value="cat3">CAT 3 - IDR 2.100.000</option>
-                                <option value="cat4">CAT 4 - IDR 1.350.000</option>
-                            </select>
+                            <p>{{$ticket->category}}</p>
                         </div>
                         <div class="form-group">
                             <label for="people" style="font-size: 14px; margin-bottom: 5px;">Number of People</label>

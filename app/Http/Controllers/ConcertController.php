@@ -38,5 +38,6 @@ class ConcertController extends Controller
         return view('bookdetail', [
             'concert' => $concert
         ]);
+
     }
 }

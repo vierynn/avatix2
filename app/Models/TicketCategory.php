@@ -24,11 +24,11 @@ class TicketCategory extends Model
 
     public function concerts()
     {
-        return $this->belongsTo(Concerts::class, 'id');
+        return $this->belongsTo(Concerts::class, 'concert_id');
     }
     public function transactions()
     {
-        return $this->hasMany(Transaction::class, 'id', 'ticketcat_id');
+        return $this->hasMany(Transaction::class, 'ticketcat_id', 'id');
     }
 }
 

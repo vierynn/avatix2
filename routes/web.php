@@ -20,14 +20,15 @@ use Illuminate\Support\Facades\Route;
 
 // test
 Route::get('/login', [AuthController::class, 'index'])->name('login');
-Route::post('/post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
+Route::post('/post-login', [AuthController::class, 'postLogin'])->name('login.post');
 Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
-Route::post('/post-signup', [AuthController::class, 'postSignup'])->name('signup.post'); 
-Route::get('/dashboard', [AuthController::class, 'dashboard']); 
+Route::post('/post-signup', [AuthController::class, 'postSignup'])->name('signup.post');
+Route::get('/dashboard', [AuthController::class, 'dashboard']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+//
 
 Route::prefix('/')->group(function() {
-    Route::get('/', function () {
+    Route::get('/home', function () {
         return view('home');
     })->name('home');
     Route::get('/history', [NavbarController::class,'history'])->name('history');
@@ -35,8 +36,8 @@ Route::prefix('/')->group(function() {
     Route::get('/notification', [NavbarController::class,'notification']);
     Route::get('/profile', [NavbarController::class,'profile']);
 });
-Route::get('/', [CategorybarController::class,'all'])->name('home');
-Route::get('/', [ConcertController::class, 'showconcert'])->name('home');
+Route::get('/home', [CategorybarController::class,'all'])->name('home');
+Route::get('/home', [ConcertController::class, 'showconcert'])->name('home');
 // Route::get('/', [ConcertController::class, 'info']);
 Route::prefix('/category')->group(function() {
     Route::get('/kpop', [CategorybarController::class,'kpop'])->name('kpop');
@@ -56,7 +57,7 @@ Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])
         ->name('bookedpage.show');
 Route::get('/bookdetail/{id?}', [ConcertController::class, 'showdetail'])
     ->name('bookdetail.showdetail');
-
 Route::get('/payment',function(){
-    return view('payment');
+    return view('paymentsolo');
 });
+Route::get('/payment/{id?}/{cat?}',[TransactionController::class, 'showcat'])->name('payment.showcat');

@@ -352,15 +352,14 @@
     margin-left: 30px;
 }
 .poster>img{
-    width: 700px;
+    width: 650px;
     height: auto;
     border-radius: 10px;
+    margin-right: 40px;
+    margin-top: 20px;
 }
-.description-concert{
-    margin-top: 220px;
-    width: 700px;
-    margin-left: -310px;
-    text-align: justify;
+.concert-desc{
+    margin-top: 150px;
 }
 .information-content{
     justify-content: space-between;
@@ -371,15 +370,15 @@
     display: flex;
 }
 .price-list-text>p{
-    width: 190px;
-    background-color: wheat;
+    width: 250px;
+    /* background-color: wheat; */
     font-family: 50px;
 }
 .seatplan-img>img{
     width: 550px;
     height: auto;
     border-radius: 7px;
-    margin-left: 680px;
+    margin-left: 600px;
 }
 
 /* BOOKING DETAIL */
@@ -588,3 +587,13 @@
     margin-top: 20px;
     font-size: 14px;
 }
+/* TICKET PAGE */
+.image-download>img{
+    width: 22px;
+    height: 20px;
+}
+.barcode-img>img{
+    width: 300px;
+    height: auto;
+}
+

@@ -36,7 +36,7 @@
                             @endif
                         </div>
                         <p style="text-decoration: underline; font-size:11px; text-align:right;"><a href="#" style="color: black;">Forgot Password?</a></p>
-                        <button type="submit" class="login-btn"><b>LOGIN</b></button>
+                        <a href="/home"><button type="submit" class="login-btn"><b>LOGIN</b></button></a>
                     </form>
                 </div>
             </div>

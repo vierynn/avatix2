@@ -12,9 +12,6 @@
                 <h3>{{$concert->artist}}{{$concert->name}}</h3>
                 <p style="color: grey"><b>{{$concert->city}}</b></p>
                 <p style="color: red"><b>Non-Refundable</b></p>
-                <form action="btn-book">
-                    <a href="/payment"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
-                </form>
             </div>
             <div class="date-concert" style="margin-left: 870px; margin-top: 108px">
                 <p style="color: grey; text-align: right"><b>{{$concert->day}}, {{$concert->date}} {{$concert->month}} {{$concert->year}}</b></p>
@@ -99,7 +96,7 @@
                       <div class="status-seat">
                         <p>Available</p>
                       </div>
-                      <a href="#" class="btn btn-light btn-seat">Book</a>
+                      <a href="{{ route('payment.showcat', ['id' => $tix->id, 'cat' => $tix->category]) }}" class="btn btn-light btn-seat">Book</a>
                     </div>
                   </div>
                 @endforeach

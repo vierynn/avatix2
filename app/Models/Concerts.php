@@ -18,12 +18,19 @@ class Concerts extends Model
         'artist',
         'type',
         'status',
+        'day',
+        'date',
+        'month',
+        'start_time',
+        'duration',
+        'year',
         'city',
         'place',
         'description',
         'image_path',
+        'seatplan_path',
     ];
-
+    
     public function transactions()
     {
         return $this->hasMany(Transaction::class, 'concert_id', 'id');
