@@ -179,5 +179,24 @@ class ConcertSeeder extends Seeder
             'image_path'=>'img/slank.jpg',
             'seatplan_path'=>'img/seatplan_slank.jpg'
         ]);
+
+        DB::table('concerts')->insert([
+            'name'=>': ASIA TOUR IN JAKARTA',
+            'artist'=>'KIM SEON HO',
+            'type'=>'Meet&Greet',
+            'status'=>'Opened',
+            'day'=>'SATURDAY',
+            'date'=>'03',
+            'month'=>'June',
+            'year'=>'2023',
+            'start_time'=>'19:00 WIB',
+            'duration'=>'2 hours',
+            'city'=>'Jakarta',
+            'place'=>'Tennis Indoor Senayan',
+            'description'=>'Kim Seon Ho is a famous Korean actor who has been acting since 2009. His popularity as an actor skyrocketed recently after showing in the Korean drama Start-Up as Han 
+            Ji Pyeong and in the Korean drama Hometown Cha Cha Cha as Hong Du Sik.',
+            'image_path'=>'img/seonho.jpeg',
+            'seatplan_path'=>'img/seatplan_seonho.jpeg'
+        ]);
     }
 }
