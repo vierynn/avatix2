@@ -26,11 +26,11 @@ class Concerts extends Model
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class, 'id', 'concert_id');
+        return $this->hasMany(Transaction::class, 'concert_id', 'id');
     }
 
     public function ticketcategory()
     {
-        return $this->hasMany(TicketCategory::class, 'id', 'concert_id');
+        return $this->hasMany(TicketCategory::class, 'concert_id', 'id');
     }
 }

@@ -13,7 +13,7 @@
                 <p style="color: grey"><b>{{$concert->city}}</b></p>
                 <p style="color: red"><b>Non-Refundable</b></p>
                 <form action="btn-book">
-                    <a href="/bookdetail"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
+                    <a href="{{ route('bookdetail.showdetail', ['id' => $concert->id]) }}"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
                 </form>
             </div>
             <div class="description-concert position absolute">
@@ -25,9 +25,9 @@
                 <img src="{{$concert->image_path}}" alt="">
             </div>
         </div>
-        <hr style="margin-top: 30px; width: 1400px">
+        <hr style="margn-top: 30px; width: 1400px">
         <div class="information">
-            <h5 style="margin-bottom: 15px">Information</h5>
+            <h5 style="marigin-bottom: 15px">Information</h5>
             <div class="information-content d-flex">
                 <div class="date-concert">
                     <p style="margin-bottom: 0px;"><b>DATE</b></p>
@@ -47,12 +47,9 @@
         <div class="price-list-content">
             <div class="price-list-text">
                 <h5 style="margin-bottom: 15px;">PRICELIST</h5>
-                <P>VIP  : IDR 3.800.000
-                    PLATINUM: IDR 3.400.000
-                    CAT 1 : IDR 2.900.000
-                    CAT 2: IDR 2.600.000
-                    CAT 3: IDR 2.100.000
-                    CAT 4: IDR 1.350.000</P>
+                @foreach ($concert->ticketcategory as $tix)
+                    <P>{{ $tix->category }}: IDR {{ $tix->price }}</P>
+                @endforeach
             </div>
             <div class="seatplan-img">
                 <img src="{{$concert->seatplan_path}}" alt="">

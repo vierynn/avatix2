@@ -21,13 +21,21 @@ class ConcertController extends Controller
     {
         if ($id):
             $concert = Concerts::find($id);
-            $ticket = TicketCategory::with('concerts')->find($id);
         else:
             $concert = Concerts::with('concert_id')->all();
-            $ticket = TicketCategory::with('concerts')->all();
         endif;
         return view('bookedpage', [
-            'ticket' => $ticket,
+            'concert' => $concert
+        ]);
+    }
+    public function showdetail($id=null)
+    {
+        if ($id):
+            $concert = Concerts::find($id);
+        else:
+            $concert = Concerts::with('concert_id')->all();
+        endif;
+        return view('bookdetail', [
             'concert' => $concert
         ]);
     }

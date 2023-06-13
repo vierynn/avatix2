@@ -53,3 +53,5 @@ Route::get('/bookdetail',function(){
 });
 Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])
         ->name('bookedpage.show');
+Route::get('/bookdetail/{id?}', [ConcertController::class, 'showdetail'])
+    ->name('bookdetail.showdetail');
