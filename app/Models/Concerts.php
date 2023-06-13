@@ -12,8 +12,10 @@ class Concerts extends Model
 {
     use HasFactory;
     protected $table = "concerts";
+    protected $primaryKey = 'id';
 
     protected $fillable = [
+        'id',
         'name',
         'artist',
         'type',

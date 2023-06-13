@@ -61,9 +61,10 @@
                 </div>
 
                 <div class="col-lg-6 border" style="width: 41%; height: 380px; margin-left: 30px; margin-top: -40px; border-radius: 5px">
-                    <form action="post" style="margin-left: 25px; margin-top: 25px;">
+                    <form name="add-form" id="add-form" action="{{url('store-form')}}" method="post" style="margin-left: 25px; margin-top: 25px;">
+                        @csrf
                         <div class="form-group">
-                            <label for="seat" style="font-size: 14px; margin-bottom: 5px;">Select Seat</label>
+                            <label for="seat" style="font-size: 14px; margin-bottom: 5px;">Seat Category</label>
                             <p>{{$ticket->category}}</p>
                         </div>
                         <div class="form-group">
@@ -71,6 +72,12 @@
                             <input onchange="purchase()" class="form-control" type="number" name="people" id="people" style="width: 60px;" min="1" max="4" style="border-color: black; border-width: 1px; width: 40%; margin-bottom: 5px;">
                         </div>
                         <br>
+
+                        <input type="hidden" id="ticket_id" name="ticket_id"  value="{{$ticket->id}}">
+                        <input type="hidden" id="user_id" name="user_id" value="{{$ticket->user_id}}">
+                        <input type="hidden" id="transMethod" name="transMethod" value="paymentmethod">
+                        <input type="hidden" id="promo" name="promo" value="promocode">
+                        
                         <div style="line-height: 8px">
                             <p style="font-size: 14px; display: inline-block;">Ticket Price</p>
                             <input type="hidden" id="price" value="{{$ticket->price}}">
@@ -78,12 +85,12 @@
                         </div>
                         <div style="line-height: 8px">
                             <p style="font-size: 12px; display: inline-block;">Admin</p>
-                            <input type="text" id="admin" value="{{$ticket->price}}">
+                            <input type="text" id="admin">
                         </div>
                         <div class="purchase-line-2"></div>
                         <div style="line-height: 8px">
                             <p style="font-size: 16px; display: inline-block;"><b>Total Price</b></p>
-                            <input type="text" id="total">
+                            <input type="text" id="total" name="total">
                         </div>
                             <a href="/history"><button type="submit" class="purchase-btn">PURCHASE NOW</button></a>
                     </form>

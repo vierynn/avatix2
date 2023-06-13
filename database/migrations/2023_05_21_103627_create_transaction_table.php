@@ -24,6 +24,7 @@ class CreateTransactionTable extends Migration
             $table->unsignedInteger('ticketcat_id');
             $table->foreign('ticketcat_id')->nullable()->references('id')->on('ticketcategory')->onDelete('cascade');
             $table->integer('quantity');
+            $table->integer('total');
         });
     }
 

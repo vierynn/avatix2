@@ -19,7 +19,7 @@
             {{ $transaction->ticket->category }}
         </p>
         <p class="card-text text-muted mb-1" style="font-size: 1vw;">
-            Rp. {{ $transaction->ticket->price }}
+            Rp. {{ $transaction->total }}
         </p>
     </div>
     </div>

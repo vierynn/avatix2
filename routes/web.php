@@ -61,3 +61,7 @@ Route::get('/payment',function(){
     return view('payment');
 });
 Route::get('/payment/{id?}/{cat?}',[TransactionController::class, 'showcat'])->name('payment.showcat');
+
+
+Route::get('add-form', [TransactionController::class, 'create']);
+Route::post('store-form', [TransactionController::class, 'store']);

@@ -12,8 +12,10 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     protected $table = "users";
+    protected $primaryKey = 'id';
 
     protected $fillable = [
+        'id',
         'firstName',
         'lastName',
         'email',
@@ -24,6 +26,6 @@ class User extends Authenticatable
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class);
+        return $this->hasMany(Transaction::class, 'user_id', 'id');
     }
 }
