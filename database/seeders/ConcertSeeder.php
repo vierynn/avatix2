@@ -193,9 +193,9 @@ class ConcertSeeder extends Seeder
             'duration'=>'2 hours',
             'city'=>'Jakarta',
             'place'=>'Tennis Indoor Senayan',
-            'description'=>'Kim Seon Ho is a famous Korean actor who has been acting since 2009. His popularity as an actor skyrocketed recently after showing in the Korean drama Start-Up as Han 
+            'description'=>'Kim Seon Ho is a famous Korean actor who has been acting since 2009. His popularity as an actor skyrocketed recently after showing in the Korean drama Start-Up as Han
             Ji Pyeong and in the Korean drama Hometown Cha Cha Cha as Hong Du Sik.',
-            'image_path'=>'img/seonho.jpeg',
+            'image_path'=>'img/seonho.jpg',
             'seatplan_path'=>'img/seatplan_seonho.jpeg'
         ]);
     }

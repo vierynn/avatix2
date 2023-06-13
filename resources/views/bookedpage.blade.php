@@ -20,7 +20,7 @@
                         <p style="color: red"><b>Non-Refundable</b></p>
                     </div>
                     <form action="btn-book">
-                        <a href="/bookdetail"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
+                        <a href="{{ route('bookdetail.showdetail', ['id' => $concert->id]) }}"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
                     </form>
                     <div class="concert-desc">
                         <hr style="width: 700px">

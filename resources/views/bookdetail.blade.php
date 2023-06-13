@@ -7,14 +7,16 @@
 <x-navbar/>
 <body>
     <div class="content-book">
-        <div class="content d-flex">
-            <div class="name-booked position-relative">
+        <div class="booked-detail-container">
+            <div class="name-concert">
                 <h3>{{$concert->artist}}{{$concert->name}}</h3>
-                <p style="color: grey"><b>{{$concert->city}}</b></p>
-                <p style="color: red"><b>Non-Refundable</b></p>
             </div>
-            <div class="date-concert" style="margin-left: 870px; margin-top: 108px">
-                <p style="color: grey; text-align: right"><b>{{$concert->day}}, {{$concert->date}} {{$concert->month}} {{$concert->year}}</b></p>
+            <div class="concert-city">
+                <p style="color: grey"><b>{{$concert->city}}</b></p>
+            </div>
+            <div class="concert-refund d-flex">
+                <p style="color: red"><b>Non-Refundable</b></p>
+                <p style="color: grey; text-align: right; margin-left:1070px"><b>{{$concert->day}}, {{$concert->date}} {{$concert->month}} {{$concert->year}}</b></p>
             </div>
         </div>
         <hr style="margin-top: 20px; width: 1400px">
@@ -26,10 +28,10 @@
                 @endforeach
             </div>
             <div class="seatplan-img">
-                <img src="{{$concert->seatplan_path}}" alt="">
+                <img src="{{asset($concert->seatplan_path)}}" alt="">
             </div>
         </div>
-        <div class="accordion accordion-flush" id="accordionFlushExample" style="width: 1380px; margin-top: 20px">
+        <div class="accordion accordion-flush" id="accordionFlushExample" style="width: 1380px; margin-top: 30px; margin-bottom: 30px">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">

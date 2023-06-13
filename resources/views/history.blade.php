@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Home')
+@section('title', 'History')
 
 @section('content')
 
@@ -27,7 +27,7 @@
             <button type="button" class="btn btn-outline-success my-1" style="font-size:0.8vw;width:15%">
                 Booked
             </button>
-        </div>       
+        </div>
         <div class="d-flex flex-row">
         <img src="{{ ('img/barcode.png') }}" class="image rounded img-thumbnail img-fluid p-2" style="object-fit: cover;width: 70px;height:70px;"alt="...">
         </div>
@@ -48,7 +48,7 @@
             <button type="button" class="btn btn-outline-success my-1" style="font-size:0.8vw;width:15%">
                 Booked
             </button>
-        </div>       
+        </div>
         <div class="d-flex flex-row">
         <img src="{{ ('img/barcode.png') }}" class="image rounded img-thumbnail img-fluid p-2" style="object-fit: cover;width: 70px;height:70px;"alt="...">
         </div>

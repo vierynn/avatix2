@@ -8,18 +8,18 @@
 
 <body>
     <div>
-        <h4 style="margin-top: 50px; margin-left: 92px;">{{$ticket->concerts->artist}}{{$ticket->concerts->name}}</h4>
+        <div class="concert-title">
+            <h4 style="margin-top: 50px; margin-left: 92px;">{{$ticket->concerts->artist}}{{$ticket->concerts->name}}</h4>
+        </div>
+        <div class="concert-city">
+            <h6 style="margin-left: 92px; color: #606060; display: inline-block; line-height: 60%;">{{$ticket->concerts->city}}</h6>
+        </div>
+        <div class="d-flex" style="margin-left: 92px">
+            <p style="color: red"><b>Non-Refundable</b></p>
+            <p style="color: grey; margin-left: 880px"><b>{{$ticket->concerts->day}}, {{$ticket->concerts->date}} {{$ticket->concerts->month}} {{$ticket->concerts->year}} {{$ticket->concerts->start_time}} </b></p>
+        </div>
+        <hr style="width: 1340px; margin-left: 92px">
     </div>
-    <div>
-        <h6 style="margin-left: 92px; color: #606060; display: inline-block; line-height: 60%;">{{$ticket->concerts->city}}</h6>
-        <p style="display: inline-block; margin-left: 617px; line-height: 60%;"><small>{{$ticket->concerts->day}}, {{$ticket->concerts->date}} {{$ticket->concerts->month}} {{$ticket->concerts->year}} {{$ticket->concerts->start_time}}</small></p>
-    </div>
-    <div>
-        <h6 style="margin-left: 92px; color: red; display: inline-block; line-height: 60%;"><b>Non-Refundable</b></h6>
-        <p style="display: inline-block; margin-left: 715.5px; line-height: 60%;"></p>
-    </div>
-
-    <div class="purchase-line-1"></div>
 
     <div class="container p-5 my-5" style="background-color: white;">
         <div class="container-fluid">
@@ -35,6 +35,7 @@
                     </div>
                     <div class="payment-details-line"></div>
                     <form action="post" style="margin-left: 10px">
+                        @csrf
                         <div class="form-group">
                             <label for="paymentmethod" style="font-size: 14px; margin-bottom: 5px;">Select Payment Method</label>
                             <select class="form-select" aria-label="Default select example" name="paymentmethod" id="form-purchase" required>
@@ -77,7 +78,7 @@
                         <input type="hidden" id="user_id" name="user_id" value="{{$ticket->user_id}}">
                         <input type="hidden" id="transMethod" name="transMethod" value="paymentmethod">
                         <input type="hidden" id="promo" name="promo" value="promocode">
-                        
+
                         <div style="line-height: 8px">
                             <p style="font-size: 14px; display: inline-block;">Ticket Price</p>
                             <input type="hidden" id="price" value="{{$ticket->price}}">
