@@ -58,6 +58,6 @@ Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])
 Route::get('/bookdetail/{id?}', [ConcertController::class, 'showdetail'])
     ->name('bookdetail.showdetail');
 Route::get('/payment',function(){
-    return view('paymentsolo');
+    return view('payment');
 });
 Route::get('/payment/{id?}/{cat?}',[TransactionController::class, 'showcat'])->name('payment.showcat');

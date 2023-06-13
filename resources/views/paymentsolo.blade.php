@@ -37,7 +37,7 @@
                     <form action="post" style="margin-left: 10px">
                         <div class="form-group">
                             <label for="paymentmethod" style="font-size: 14px; margin-bottom: 5px;">Select Payment Method</label>
-                            <select class="form-select" aria-label="Default select example" name="paymentmethod" id="form-purchase">
+                            <select class="form-select" aria-label="Default select example" name="paymentmethod" id="form-purchase" required>
                                 <option selected></option>
                                 <option value="mastercard" style="position: relative;"><img src="{{asset('img/mastercard.png')}}" alt="" class="payment-method-logo">Mastercard Visa</option>
                                 <option value="ovo"><img src="{{asset('img/ovo.png')}}" alt="" class="payment-method-logo">Ovo</option>
@@ -73,18 +73,19 @@
                         <br>
                         <div style="line-height: 8px">
                             <p style="font-size: 14px; display: inline-block;">Ticket Price</p>
+                            <input type="hidden" id="price" value="{{$ticket->price}}">
                             <input type="text" id="result">
                         </div>
                         <div style="line-height: 8px">
                             <p style="font-size: 12px; display: inline-block;">Admin</p>
-                            <input type="text" id="admin">
+                            <input type="text" id="admin" value="{{$ticket->price}}">
                         </div>
                         <div class="purchase-line-2"></div>
                         <div style="line-height: 8px">
                             <p style="font-size: 16px; display: inline-block;"><b>Total Price</b></p>
                             <input type="text" id="total">
                         </div>
-                            <a href="/ticket"><button type="submit" class="purchase-btn">PURCHASE NOW</button></a>
+                            <a href="/history"><button type="submit" class="purchase-btn">PURCHASE NOW</button></a>
                     </form>
                 </div>
             </div>

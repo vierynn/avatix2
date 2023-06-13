@@ -1,31 +1,9 @@
 function sum() {
     var seat = document.getElementById('seat');
     var people = document.getElementById('people');
+    var price = document.getElementById('price');
     var result = document.getElementById('result');
-    if (seat.value == "vip")
-    {
-        result.value = people.value*3800000;
-    }
-    else if(seat.value=="platinum")
-    {
-        result.value = people.value*3400000;
-    }
-    else if(seat.value=="cat1")
-    {
-        result.value = people.value*2900000;
-    }
-    else if(seat.value=="cat2")
-    {
-        result.value = people.value*2600000;
-    }
-    else if(seat.value=="cat3")
-    {
-        result.value = people.value*2100000;
-    }
-    else if(seat.value=="cat4")
-    {
-        result.value = people.value*1350000;
-    }
+    result.value = price.value*people.value;
 }
 
 function admin() {
