@@ -62,7 +62,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  <b>How to Exchange BLACKPINK 'BORN PINK' Concert Tickets  in Jakarta</b>
+                  <b>How to Exchange {{ $concert->artist }}{{ $concert->name }} Concert Tickets in {{$concert->city}}</b>
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -92,16 +92,18 @@
           </div>
         <div class="list-category-seat">
             <div class="seat-content">
+            @foreach ($concert->ticketcategory as $tix)
                 <div class="card" style="width: 1260px; margin-left: 40px; margin-top: 30px; margin-bottom: 20px; padding: 20px; height: 160px;">
                     <div class="card-body">
-                      <h5 class="card-title">VIP - IDR 3.800.000</h5>
+                      <h5 class="card-title">{{ $tix->category }} - IDR {{ $tix->price }}</h5>
                       <div class="status-seat">
                         <p>Available</p>
                       </div>
                       <a href="#" class="btn btn-light btn-seat">Book</a>
                     </div>
                   </div>
-                  </div>
+                @endforeach
+                </div>
             </div>
         </div>
     </div>
