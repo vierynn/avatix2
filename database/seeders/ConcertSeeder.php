@@ -183,19 +183,20 @@ class ConcertSeeder extends Seeder
         DB::table('concerts')->insert([
             'name'=>': ASIA TOUR IN JAKARTA',
             'artist'=>'KIM SEON HO',
-            'type'=>'K-pop',
+            'type'=>'Meet&Greet',
             'status'=>'Opened',
             'day'=>'SATURDAY',
-            'date'=>'3',
+            'date'=>'03',
             'month'=>'June',
             'year'=>'2023',
             'start_time'=>'19:00 WIB',
             'duration'=>'2 hours',
-            'city'=>'Jskarta',
+            'city'=>'Jakarta',
             'place'=>'Tennis Indoor Senayan',
-            'description'=>"The Korean artist's fanmeet schedule in Indonesia was then filled by Kim Seon-ho. After being on hiatus for about a year, the actor who will be starring in the film Sad Tropics is ready to hold a fan meeting in the Asian region in an event titled ASIA TOUR IN JAKARTA.",
-            'image_path'=>'img/kim_seon_ho.png',
-            'seatplan_path'=>'img/seatplan_kim_seon_hp.jpg'
+            'description'=>'Kim Seon Ho is a famous Korean actor who has been acting since 2009. His popularity as an actor skyrocketed recently after showing in the Korean drama Start-Up as Han 
+            Ji Pyeong and in the Korean drama Hometown Cha Cha Cha as Hong Du Sik.',
+            'image_path'=>'img/seonho.jpeg',
+            'seatplan_path'=>'img/seatplan_seonho.jpeg'
         ]);
     }
 }

@@ -11,23 +11,26 @@ class Transaction extends Model
 {
     use HasFactory;
     protected $table = "transactions";
+    protected $primaryKey = 'id';
 
     protected $fillable = [
+        'id',
         'transMethod',
         'promo',
         'date',
         'user_id',
-        'ticket_id',
-        'quantity'
+        'ticketcat_id',
+        'quantity',
+        'total'
     ];
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function ticket()
     {
-        return $this->belongsTo(TicketCategory::class, 'id');
+        return $this->belongsTo(TicketCategory::class, 'ticketcat_id');
     }
 }

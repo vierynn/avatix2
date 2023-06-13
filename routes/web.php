@@ -25,6 +25,7 @@ Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
 Route::post('/post-signup', [AuthController::class, 'postSignup'])->name('signup.post');
 Route::get('/dashboard', [AuthController::class, 'dashboard']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+//
 
 Route::prefix('/')->group(function() {
     Route::get('/home', function () {
@@ -45,13 +46,22 @@ Route::prefix('/category')->group(function() {
     Route::get('/meetandgreet', [CategorybarController::class,'meet'])->name('meet');
     Route::get('/pop', [CategorybarController::class,'pop'])->name('pop');
 });
+
+Route::get('/bookedpage',function(){
+    return view('bookedpage');
+});
 Route::get('/bookdetail',function(){
     return view('bookdetail');
 });
-Route::get('/ticket',function(){
-    return view('ticket');
-});
+Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])
+        ->name('bookedpage.show');
+Route::get('/bookdetail/{id?}', [ConcertController::class, 'showdetail'])
+    ->name('bookdetail.showdetail');
 Route::get('/payment',function(){
     return view('payment');
 });
-Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])->name('bookedpage.show');
+Route::get('/payment/{id?}/{cat?}',[TransactionController::class, 'showcat'])->name('payment.showcat');
+
+
+Route::get('add-form', [TransactionController::class, 'create']);
+Route::post('store-form', [TransactionController::class, 'store']);

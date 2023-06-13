@@ -9,30 +9,24 @@
     <div class="content-book">
         <div class="content d-flex">
             <div class="name-booked position-relative">
-                <h3>BLACKPINK: BORN-PINK</h3>
-                <p style="color: grey"><b>JAKARTA PUSAT, INDONESIA</b></p>
-                <p style="color: red"><b>Non-Refunable</b></p>
-                <form action="btn-book">
-                    <a href="/payment"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
-                </form>
+                <h3>{{$concert->artist}}{{$concert->name}}</h3>
+                <p style="color: grey"><b>{{$concert->city}}</b></p>
+                <p style="color: red"><b>Non-Refundable</b></p>
             </div>
             <div class="date-concert" style="margin-left: 870px; margin-top: 108px">
-                <p style="color: grey; text-align: right"><b>SATURDAY, 11 March 2023 <br>SUNDAY, 12 March 2023</b></p>
+                <p style="color: grey; text-align: right"><b>{{$concert->day}}, {{$concert->date}} {{$concert->month}} {{$concert->year}}</b></p>
             </div>
         </div>
         <hr style="margin-top: 20px; width: 1400px">
         <div class="price-list-content">
             <div class="price-list-text">
                 <h5 style="margin-bottom: 15px;">PRICELIST</h5>
-                <P>VIP  : IDR 3.800.000 <br>
-                    PLATINUM: IDR 3.400.000 <br>
-                    CAT 1 : IDR 2.900.000 <br>
-                    CAT 2: IDR 2.600.000 <br>
-                    CAT 3: IDR 2.100.000 <br>
-                    CAT 4: IDR 1.350.000</P>
+                @foreach ($concert->ticketcategory as $tix)
+                    <P>{{ $tix->category }}: IDR {{ $tix->price }}</P>
+                @endforeach
             </div>
             <div class="seatplan-img">
-                <img src="{{asset('img/seatplan_blackpink.jpg')}}" alt="">
+                <img src="{{$concert->seatplan_path}}" alt="">
             </div>
         </div>
         <div class="accordion accordion-flush" id="accordionFlushExample" style="width: 1380px; margin-top: 20px">
@@ -65,7 +59,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  <b>How to Exchange BLACKPINK 'BORN PINK' Concert Tickets  in Jakarta</b>
+                  <b>How to Exchange {{ $concert->artist }}{{ $concert->name }} Concert Tickets in {{$concert->city}}</b>
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -95,16 +89,18 @@
           </div>
         <div class="list-category-seat">
             <div class="seat-content">
+            @foreach ($concert->ticketcategory as $tix)
                 <div class="card" style="width: 1260px; margin-left: 40px; margin-top: 30px; margin-bottom: 20px; padding: 20px; height: 160px;">
                     <div class="card-body">
-                      <h5 class="card-title">VIP - IDR 3.800.000</h5>
+                      <h5 class="card-title">{{ $tix->category }} - IDR {{ $tix->price }}</h5>
                       <div class="status-seat">
                         <p>Available</p>
                       </div>
-                      <a href="#" class="btn btn-light btn-seat">Book</a>
+                      <a href="{{ route('payment.showcat', ['id' => $tix->id, 'cat' => $tix->category]) }}" class="btn btn-light btn-seat">Book</a>
                     </div>
                   </div>
-                  </div>
+                @endforeach
+                </div>
             </div>
         </div>
     </div>
