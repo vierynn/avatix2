@@ -31,6 +31,6 @@ class Transaction extends Model
 
     public function ticket()
     {
-        return $this->belongsTo(TicketCategory::class, 'ticket_id');
+        return $this->belongsTo(TicketCategory::class, 'ticketcat_id');
     }
 }

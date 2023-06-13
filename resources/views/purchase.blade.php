@@ -9,7 +9,7 @@
 <body>
 <div class="container d-flex flex-column mt-4 mb-5">
     <h2 class="pb-3">Purchases</h2>
-    @foreach ($trans as $transaction)
+    @foreach ($trans->reverse() as $transaction)
     <div class="card d-flex flex-row mx-auto mb-3" style="width: 100%;">
     <img src="{{ $transaction->ticket->concerts->image_path }}" class="image rounded img-fluid p-3" style="object-fit: cover;width: 9.5vw;height:9.5vw;"alt="...">
     <div class="vr mx-2 my-3"></div>

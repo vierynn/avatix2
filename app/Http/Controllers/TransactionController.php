@@ -35,7 +35,7 @@ class TransactionController extends Controller
             'promo' => $request->promo
         ]);
         
-        return redirect('/history');
+        return redirect('/home');
     }
 
     public function create()
