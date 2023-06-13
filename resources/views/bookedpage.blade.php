@@ -7,22 +7,32 @@
 <x-navbar/>
 <body>
     <div class="content-book">
-        <div class="content d-flex">
-            <div class="name-booked position-relative">
-                <h3>{{$concert->artist}}{{$concert->name}}</h3>
-                <p style="color: grey"><b>{{$concert->city}}</b></p>
-                <p style="color: red"><b>Non-Refundable</b></p>
-                <form action="btn-book">
-                    <a href="{{ route('bookdetail.showdetail', ['id' => $concert->id]) }}"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
-                </form>
-            </div>
-            <div class="description-concert position absolute">
-                <hr style="width: 700px">
-                <h5 class="mb-3">Description</h5>
-                <p>{{$concert->description}}</p>
-            </div>
-            <div class="poster position-absolute" style="margin-left: 730px;">
-                <img src="{{$concert->image_path}}" alt="">
+        <div class="container-booked">
+            <div class="row">
+                <div class="col">
+                    <div class="concert-name">
+                        <h3>{{$concert->artist}}{{$concert->name}}</h3>
+                    </div>
+                    <div class="concert-city">
+                        <p style="color: grey"><b>{{$concert->city}}</b></p>
+                    </div>
+                    <div class="concert-refund">
+                        <p style="color: red"><b>Non-Refundable</b></p>
+                    </div>
+                    <form action="btn-book">
+                        <a href="/bookdetail"><button type="button" class="btn btn-light btn-booked2">Book</button></a>
+                    </form>
+                    <div class="concert-desc">
+                        <hr style="width: 700px">
+                        <h5 class="mb-3">Description</h5>
+                        <p>{{$concert->description}}</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="poster">
+                        <img src="{{asset($concert->image_path)}}" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         <hr style="margn-top: 30px; width: 1400px">
