@@ -5,6 +5,7 @@ use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\ConcertController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,14 +48,8 @@ Route::prefix('/category')->group(function() {
     Route::get('/pop', [CategorybarController::class,'pop'])->name('pop');
 });
 
-// Route::get('/bookedpage',function(){
-//     return view('bookedpage');
-// });
-// Route::get('/bookdetail',function(){
-//     return view('bookdetail');
-// });
 Route::get('/bookedpage/{id?}', [ConcertController::class, 'show'])
-        ->name('bookedpage.show');
+        ->name('bookedpage');
 Route::get('/bookdetail/{id?}', [ConcertController::class, 'showdetail'])
     ->name('bookdetail.showdetail');
 Route::get('/payment',function(){
@@ -64,3 +59,6 @@ Route::get('/payment/{id?}/{cat?}',[TransactionController::class, 'showcat'])->n
 
 Route::get('add-form', [TransactionController::class, 'create']);
 Route::post('store-form', [TransactionController::class, 'store']);
+// Route::get('/search', SearchController::class)->name('search');
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/ticket', [ConcertController::class,'ticketshow'])->name('ticket');

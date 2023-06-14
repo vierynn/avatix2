@@ -40,4 +40,14 @@ class ConcertController extends Controller
         ]);
 
     }
+    public function ticketshow(){
+        if ($id):
+            $concert = Concerts::find($id);
+        else:
+            $concert = Concerts::with('concert_id')->all();
+        endif;
+        return view('bookedpage', [
+            'concert' => $concert
+        ]);
+    }
 }

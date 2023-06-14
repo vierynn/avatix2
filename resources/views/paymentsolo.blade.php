@@ -93,7 +93,7 @@
                             <p style="font-size: 16px; display: inline-block;"><b>Total Price</b></p>
                             <input type="text" id="total" name="total">
                         </div>
-                            <a href="/history"><button type="submit" class="purchase-btn">PURCHASE NOW</button></a>
+                            <a href="{{Route('ticket')}}"><button type="submit" class="purchase-btn">PURCHASE NOW</button></a>
                     </form>
                 </div>
             </div>

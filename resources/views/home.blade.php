@@ -231,12 +231,57 @@
                 <div class="search-logo">
                     <img src="{{asset('img/icon-search.png')}}" alt="">
                 </div>
+                <div class="btn-search">
+                    <button type="submit" class="btn btn-light" style="background-color: #FF45B5 !important; color: white">Search</button>
+                </div>
                 <div class="main">
                     <div class="form-group has-search">
                       <span class="fa fa-search form-control-feedback"></span>
-                      <input type="text" class="form-control" placeholder="Search">
+                      <form action="{{route('search')}}" method="GET">
+                        <input type="text" class="form-control" name="query" placeholder="Search">
+
+                      </form>
                     </div>
                 </div>
+                @isset($results)
+                <div class="cards-container-search">
+                    @if($results->isEmpty())
+                        <p>No Concert Found.</p>
+                    @else
+                        @foreach ($results as $result)
+                        <div class="cards-container">
+                            <div class="card mb-3 cards position-relative">
+                                <div class="row g-0 card-content">
+                                    <div class="col-md-4 image-cards">
+                                        <img src="{{asset($result->image_path)}}" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body cards-content">
+                                            <h6 class="card-title">{{$result->artist}}{{$result->name}}</h6>
+                                            <p class="card-text">{{$result->description}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="information-concert position-absolute">
+                                        <div class="info-content">
+                                            <h2>{{$result->date}}</h2>
+                                            <p>{{$result->month}}<br>{{$result->year}}</p>
+                                        </div>
+                                        <div class="location">
+                                            <p>{{$result->place}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="position-absolute">
+                                        <form action="{{route('bookedpage')}}">
+                                            <a href="{{route('bookedpage')}}"><button type="button" class="btn btn-light btn-booked">Book</button></a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    @endif
+                </div>
+                @endisset
             </div>
             @yield('concert')
         </div>

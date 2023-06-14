@@ -13,7 +13,7 @@ class AuthController extends Controller
     public function index()
     {
         return view('login');
-    }  
+    }
 
     public function signup()
     {
@@ -22,60 +22,58 @@ class AuthController extends Controller
 
     public function postLogin(Request $request)
     {
-        $request->validate([
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-   
         $credentials = $request->only('username', 'password');
+
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                        ->withSuccess('Login Successful');
+            // Jika autentikasi berhasil
+            return redirect()->intended('/dashboard');
+        } else {
+            // Jika autentikasi gagal
+            return back()->withErrors([
+                'username' => 'Username atau password salah.',
+            ]);
         }
-  
-        return redirect("login")->withSuccess('Invalid Credentials');
     }
 
     public function postSignup(Request $request)
-    {  
+    {
+        // Validasi input
         $request->validate([
-            'firstName' => 'required',
-            'lastName' => 'required',
+            'firstname' => 'required',
+            'lastname' => 'required',
             'email' => 'required|email|unique:users',
             'username' => 'required|unique:users',
             'password' => 'required|min:6',
         ]);
-           
-        $data = $request->all();
-        $check = $this->create($data);
-         
-        return redirect("dashboard")->withSuccess('Login Succesful');
+
+        // Membuat user baru
+        $user = new User();
+        $user->firstName = $request->input('firstname');
+        $user->lastName = $request->input('lastname');
+        $user->email = $request->input('email');
+        $user->username = $request->input('username');
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
+
+        // Setelah signup, langsung login
+        Auth::login($user);
+
+        return redirect('/dashboard');
     }
 
     public function dashboard()
     {
-        if(Auth::check()){
+        // Cek apakah user sudah login
+        if (Auth::check()) {
             return view('dashboard');
+        } else {
+            return redirect('/');
         }
-  
-        return redirect("dashboard")->withSuccess('No access');
     }
 
-    public function create(array $data)
+    public function logout()
     {
-      return User::create([
-        'firstName' => $data['firstName'],
-        'lastName' => $data['lastName'],
-        'email' => $data['email'],
-        'username' => $data['username'],
-        'password' => Hash::make($data['password'])
-      ]);
-    }
-
-    public function logout() {
-        Session::flush();
         Auth::logout();
-  
-        return redirect('login');
+        return redirect('/');
     }
 }

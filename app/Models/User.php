@@ -23,6 +23,10 @@ class User extends Authenticatable
         'password',
         'profile_pic'
     ];
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 
     public function transactions()
     {
