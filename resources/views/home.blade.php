@@ -271,8 +271,8 @@
                                         </div>
                                     </div>
                                     <div class="position-absolute">
-                                        <form action="{{route('bookedpage')}}">
-                                            <a href="{{route('bookedpage')}}"><button type="button" class="btn btn-light btn-booked">Book</button></a>
+                                        <form action="{{ route('bookedpage', ['id' => $result->id]) }}">
+                                            <a href="{{ route('bookedpage', ['id' => $result->id]) }}"><button type="button" class="btn btn-light btn-booked">Book</button></a>
                                         </form>
                                     </div>
                                 </div>

@@ -30,7 +30,7 @@
                     <img src="{{asset('img/icon-profile.png')}}" alt="">
                 </div>
                 <div class="user-name">
-                    <p>Nicholas</p>
+                    <p>{{Auth::user()['firstName']}}</p>
                 </div>
             </div>
         </a>

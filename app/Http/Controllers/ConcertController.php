@@ -10,6 +10,7 @@ class ConcertController extends Controller
 {
 
     public function showconcert(){
+        // var_dump(Auth::user());
         $concerts= Concerts::all();
         return view('allconcert', compact('concerts'));
     }

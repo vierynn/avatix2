@@ -22,11 +22,12 @@ class AuthController extends Controller
 
     public function postLogin(Request $request)
     {
+        var_dump("a");
         $credentials = $request->only('username', 'password');
 
         if (Auth::attempt($credentials)) {
             // Jika autentikasi berhasil
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/home');
         } else {
             // Jika autentikasi gagal
             return back()->withErrors([
@@ -37,17 +38,20 @@ class AuthController extends Controller
 
     public function postSignup(Request $request)
     {
+        // var_dump($request);
         // Validasi input
-        $request->validate([
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'email' => 'required|email|unique:users',
-            'username' => 'required|unique:users',
-            'password' => 'required|min:6',
-        ]);
+        // $request->validate([
+        //     'firstname' => 'required',
+        //     'lastname' => 'required',
+        //     'email' => 'required|email|unique:users',
+        //     'username' => 'required|unique:users',
+        //     'password' => 'required|min:6',
+        // ]);
 
         // Membuat user baru
         $user = new User();
+        var_dump($request->input("firstname"));
+        $user->profile_pic = "";
         $user->firstName = $request->input('firstname');
         $user->lastName = $request->input('lastname');
         $user->email = $request->input('email');
@@ -58,7 +62,7 @@ class AuthController extends Controller
         // Setelah signup, langsung login
         Auth::login($user);
 
-        return redirect('/dashboard');
+        return redirect('/home');
     }
 
     public function dashboard()

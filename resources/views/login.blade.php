@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-lg-6" style="width: 42%; margin-left: 125px;">
                     <p style="font-size: 22px; text-align:center;">Login</p>
-                    <form action="post">
+                    <form action="{{ route('login.post') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="username" style="font-size: 14px;">Username</label>
@@ -36,7 +36,7 @@
                             @endif
                         </div>
                         <p style="text-decoration: underline; font-size:11px; text-align:right;"><a href="#" style="color: black;">Forgot Password?</a></p>
-                        <a href="/home"><button type="submit" class="login-btn"><b>LOGIN</b></button></a>
+                        <button type="submit" class="login-btn"><b>LOGIN</b></button>
                     </form>
                 </div>
             </div>
