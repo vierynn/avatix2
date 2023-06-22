@@ -17,10 +17,20 @@ class CreateConcertsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->string('artist')->nullable();
             $table->string('type');
             $table->string('status');
-            $table->string('location');
+            $table->string('day');
+            $table->integer('date');
+            $table->string('month');
+            $table->string('start_time');
+            $table->string('duration');
+            $table->integer('year');
+            $table->string('city');
+            $table->string('place');
             $table->text('description');
+            $table->string('image_path');
+            $table->string('seatplan_path');
         });
     }
 

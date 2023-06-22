@@ -17,6 +17,9 @@ class CreateTicketcategoryTable extends Migration
             $table->increments('id');
             $table->integer('price');
             $table->string('category');
+            $table->date('date');
+            $table->unsignedInteger('concert_id');
+            $table->foreign('concert_id')->nullable()->references('id')->on('concerts')->onDelete('cascade');
             $table->timestamps();
         });
     }

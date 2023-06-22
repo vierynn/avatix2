@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use App\Models\Concerts;
 use App\Models\Transaction;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -13,21 +12,24 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     protected $table = "users";
+    protected $primaryKey = 'id';
 
     protected $fillable = [
+        'id',
         'firstName',
         'lastName',
         'email',
-        'password'
+        'username',
+        'password',
+        'profile_pic'
     ];
-
-    public function concerts()
-    {
-        return $this->hasMany(Concerts::class);
-    }
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class);
+        return $this->hasMany(Transaction::class, 'user_id', 'id');
     }
 }

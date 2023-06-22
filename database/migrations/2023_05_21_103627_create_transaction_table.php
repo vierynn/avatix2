@@ -13,17 +13,18 @@ class CreateTransactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('transaction', function (Blueprint $table) {
-            $table->increments('tr_id');
+        Schema::create('transactions', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
             $table->string('transMethod');
-            $table->string('promo');
-            $table->date('date')->format('Y-m-d');
-            $table->unique(array('tr_id'));
+            $table->string('promo')->nullable();
+            $table->date('date');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->nullable()->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedInteger('ticket_id');
-            $table->foreign('ticket_id')->nullable()->references('id')->on('ticket')->onDelete('cascade');
+            $table->unsignedInteger('ticketcat_id');
+            $table->foreign('ticketcat_id')->nullable()->references('id')->on('ticketcategory')->onDelete('cascade');
+            $table->integer('quantity');
+            $table->integer('total');
         });
     }
 
@@ -37,3 +38,4 @@ class CreateTransactionTable extends Migration
         Schema::dropIfExists('transaction');
     }
 }
+

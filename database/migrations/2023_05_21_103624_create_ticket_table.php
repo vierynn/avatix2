@@ -15,8 +15,6 @@ class CreateTicketTable extends Migration
     {
         Schema::create('ticket', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('concert_id');
-            $table->foreign('concert_id')->nullable()->references('id')->on('concerts')->onDelete('cascade');
             $table->unsignedInteger('ticketcat_id');
             $table->foreign('ticketcat_id')->nullable()->references('id')->on('ticketcategory')->onDelete('cascade');
             $table->timestamps();

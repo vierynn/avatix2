@@ -1,24 +1,36 @@
 <?php
 
 namespace App\Models;
-use App\Models\Ticket;
+use App\Models\Transaction;
+use App\Models\Concerts;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ticket extends Model
+class TicketCategory extends Model
 {
     use HasFactory;
-    protected $table = "ticket";
+    protected $table = "ticketcategory";
+    protected $primaryKey = 'id';
 
     protected $fillable = [
+        'id',
         'price',
-        'category'
+        'day',
+        'date',
+        'month',
+        'year',
+        'category',
+        'concert_id'
     ];
 
-    public function ticket()
+    public function concerts()
     {
-        return $this->hasMany(Ticket::class);
+        return $this->belongsTo(Concerts::class, 'concert_id');
+    }
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'ticketcat_id', 'id');
     }
 }
 
