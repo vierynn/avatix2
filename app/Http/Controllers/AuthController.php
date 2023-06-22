@@ -62,7 +62,7 @@ class AuthController extends Controller
         // Setelah signup, langsung login
         Auth::login($user);
 
-        return redirect('/home');
+        return redirect('/login');
     }
 
     public function dashboard()

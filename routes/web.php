@@ -62,3 +62,8 @@ Route::post('store-form', [TransactionController::class, 'store']);
 // Route::get('/search', SearchController::class)->name('search');
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 Route::get('/ticket', [ConcertController::class,'ticketshow'])->name('ticket');
+
+
+Route::get('/tix', function () {
+    return view('tix');
+})->name('tix');

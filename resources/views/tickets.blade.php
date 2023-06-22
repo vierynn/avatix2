@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Ticket')
+@section('title', 'Tickets')
 
 @section('content')
 
